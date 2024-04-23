@@ -1,0 +1,1374 @@
+#pragma version 8
+// resource: R_Txn
+txn ApplicationID
+bz alloc
+byte base64()
+app_global_get
+dup
+int 0
+extract_uint64
+store 1 // GV_currentStep :: UInt
+int 8
+extract_uint64
+store 2 // GV_currentTime :: UInt
+byte base64(AA==)
+app_global_get
+byte base64(AQ==)
+app_global_get
+concat
+byte base64(Ag==)
+app_global_get
+concat
+byte base64(Aw==)
+app_global_get
+concat
+byte base64(BA==)
+app_global_get
+concat
+byte base64(BQ==)
+app_global_get
+concat
+preamble:
+pushbytess base64(Tm/dgg==) base64(ZuR8pg==) base64(asP1Ig==) base64(1Qqxfg==) base64(52GF8A==) base64(88VKLQ==)
+txna ApplicationArgs 0
+match Info___address_3_eNeXrvXNrKOJiCxz7cpFOyGSAE1MvTfl51jjnruXJg_ _reachp_2 Umvir_propose__bgNtUgQB2qTa5lZ3Tb2F7kOS_Ny6V_4o4bzILOn53pkM_ _reachp_0 Umvir_support_uiO5ZwNG6R8qgTbYO8lWLnsETBD5lvSABAJSJChz3_PIM_ register_uint64_1KepGsPO1ESZ5X2VqMBpjs1LQU4JKiEnWzSlCL1cyuU_
+errl:
+err
+Info___address_3_eNeXrvXNrKOJiCxz7cpFOyGSAE1MvTfl51jjnruXJg_:
+_reacha_Info:
+load 1 // GV_currentStep :: UInt
+int 3
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./TRI.rsh:390:26:property binding
+callsub l2_LF_svsLoad_3
+load 19 // s/1767
+int 391
+int 129
+extract3
+store 11 // v1818
+load 19 // s/1767
+int 520
+int 96
+extract3
+load 19 // s/1767
+int 1
+int 390
+extract3
+concat
+load 11 // v1818
+extract 65 32
+load 11 // v1818
+extract 1 32
+concat
+load 11 // v1818
+extract 97 32
+concat
+load 11 // v1818
+extract 33 32
+concat
+load 11 // v1818
+extract 0 1
+concat
+concat
+store 4 // GV_apiRet :: Null
+apiReturn_check:
+txn OnCompletion
+int NoOp
+==
+assert
+// checked on completion
+apiReturn_noCheck:
+byte base64(FR98dQ==)
+load 4 // GV_apiRet :: Null
+concat
+log // up to 619 bytes
+done:
+int 1
+return
+Umvir_propose__bgNtUgQB2qTa5lZ3Tb2F7kOS_Ny6V_4o4bzILOn53pkM_:
+txna ApplicationArgs 1
+store 11 // v8847
+_reacha_Umvir_propose:
+int 8
+bzero
+byte base64(AA==)
+load 11 // v8847
+concat
+int 8
+bzero
+concat
+concat
+store 11 // v8875
+_reachi_2:
+int 3
+load 1 // GV_currentStep :: UInt
+==
+assert
+callsub l2_LF_svsLoad_3
+load 11 // v8875
+int 0
+extract_uint64
+store 12 // v8874
+load 11 // v8875
+extract 8 139
+store 16 // .fork270.msg/2100
+byte base64(2rZtjA==)
+load 12 // v8874
+itob
+concat
+load 16 // .fork270.msg/2100
+concat
+log // up to 151 bytes
+// ^ log: "_reach_e2" [v8874,.fork270.msg/2100] "_reach_e2(uint64,(byte,byte[138]))"
+load 12 // v8874
+callsub l3_LF_timeCheck
+load 16 // .fork270.msg/2100
+int 0
+getbyte
+switch l7_Umvir_propose0_270 l8_Umvir_support0_270 l9_register0_270
+b errl
+Umvir_support_uiO5ZwNG6R8qgTbYO8lWLnsETBD5lvSABAJSJChz3_PIM_:
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+store 11 // v8854
+store 12 // v8853
+_reacha_Umvir_support:
+int 8
+bzero
+byte base64(AQ==)
+load 12 // v8853
+itob
+load 11 // v8854
+concat
+concat
+concat
+store 11 // v8875
+b _reachi_2
+_api_Umvir_propose2:
+load 16 // .fork270.msg/2100
+extract 1 130
+dup
+store 12 // cmd/2108
+int 0
+getbyte
+switch l11_Harvest l12_Kill l13_NewInfo l14_NewUmvirs l15_NoOp l16_Rewards
+b errl
+_api_Umvir_support2:
+load 11 // data_id/2482
+int 0
+extract_uint64
+store 24 // oth/2613
+load 11 // data_id/2482
+extract 8 130
+dup
+store 23 // data_id/2614
+int 0
+getbyte
+switch l34_Harvest l35_Kill l36_NewInfo l37_NewUmvirs l38_NoOp l39_Rewards
+b errl
+_api_register2:
+load 11 // data_id/2861
+int 0
+extract_uint64
+store 13 // ctc/2909
+byte base64(YXBwSUQ=)
+load 13 // ctc/2909
+itob
+concat
+sha512_256
+txn Sender
+==
+assert
+// ^ Claim: not contract
+// at reach standard library:57:5:application
+// at ./TRI.rsh:436:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:450:15:application call to "chkCtc" (defined at: ./TRI.rsh:435:39:function exp)
+// at ./TRI.rsh:449:50:application call to [unknown function] (defined at: ./TRI.rsh:449:50:function exp)
+// at ./TRI.rsh:413:31:application call to [unknown function] (defined at: ./TRI.rsh:449:50:function exp)
+// at ./TRI.rsh:413:31:application call to [unknown function] (defined at: ./TRI.rsh:413:31:function exp)
+load 19 // s/1767
+int 391
+int 129
+extract3
+dup
+store 14 // v3210
+extract 65 32
+load 14 // v3210
+extract 1 32
+concat
+load 14 // v3210
+extract 97 32
+concat
+load 14 // v3210
+extract 33 32
+concat
+load 14 // v3210
+extract 0 1
+concat
+store 12 // v3216
+byte base64(AAAAAAAADJA=)
+load 12 // v3216
+concat
+log // up to 137 bytes
+load 12 // v3216
+store 4 // GV_apiRet :: Null
+load 13 // ctc/2909
+itob
+load 11 // data_id/2861
+extract 8 8
+concat
+load 11 // data_id/2861
+extract 16 8
+concat
+store 12 // v3238
+byte base64(RnTlrA==)
+load 12 // v3238
+concat
+log // up to 28 bytes
+// ^ log: "Register" [v3238] "Register((uint64,uint64,uint64))"
+global Round
+store 18 // thisConsensusTime/1768
+_reachl_1:
+load 19 // s/1767
+extract 0 1
+btoi
+bz l52_ifF
+updateStateHalt:
+txn OnCompletion
+int DeleteApplication
+==
+assert
+// checked on completion
+callsub l54_LF_updateMbr
+// resource: R_Account
+int 0
+global CurrentApplicationAddress
+global CreatorAddress
+callsub l55_LF_makeTxn_False_True_False_True
+updateState:
+load 3 // GV_wasntMeth :: Bool
+bnz done
+b apiReturn_noCheck
+_reacha_register:
+int 8
+bzero
+byte base64(Ag==)
+load 13 // v8861
+itob
+load 12 // v8862
+itob
+concat
+load 11 // v8863
+itob
+concat
+concat
+int 114
+bzero
+concat
+concat
+store 11 // v8875
+b _reachi_2
+_reachi_0:
+load 11 // v8872
+int 0
+extract_uint64
+store 12 // v8871
+load 11 // v8872
+extract 8 96
+store 14 // umvirs0/1729
+load 11 // v8872
+extract 104 96
+store 15 // info0/1730
+byte base64(VMIG2g==)
+load 12 // v8871
+itob
+concat
+load 14 // umvirs0/1729
+concat
+load 15 // info0/1730
+concat
+log // up to 204 bytes
+// ^ log: "_reach_e0" [v8871,umvirs0/1729,info0/1730] "_reach_e0(uint64,address[3],(uint256,uint256,uint256))"
+load 12 // v8871
+callsub l3_LF_timeCheck
+load 15 // info0/1730
+extract 32 32
+store 13 // protoFee/1733
+load 15 // info0/1730
+extract 0 32
+store 12 // lpFee/1734
+load 15 // info0/1730
+extract 64 32
+store 11 // totFee/1735
+load 13 // protoFee/1733
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+load 12 // lpFee/1734
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+bz l4_localIfF
+load 11 // totFee/1735
+load 12 // lpFee/1734
+load 13 // protoFee/1733
+b+
+callsub l6_LF_checkUInt256ResultLen
+b==
+store 15 // v1739
+l5_localIfK:
+load 15 // v1739
+load 11 // totFee/1735
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+load 11 // totFee/1735
+global ZeroAddress
+b>
+&&
+assert
+// ^ Claim: invalid protocol info
+// at reach standard library:57:5:application
+// at ./TRI.rsh:399:12:application call to "check" (defined at: reach standard library:49:32:function exp)
+byte base64(BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==)
+store 20 // v1750
+byte base64(AA==)
+load 20 // v1750
+dup
+concat
+load 20 // v1750
+concat
+concat
+byte base64(AA==)
+load 12 // lpFee/1734
+concat
+global CurrentApplicationAddress
+concat
+load 13 // protoFee/1733
+concat
+load 11 // totFee/1735
+concat
+concat
+load 14 // umvirs0/1729
+concat
+global Round
+int 0
+store 17 // netBalance/1771
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+_reachp_0:
+callsub l0_LF_wasntMeth
+int 100000
+l1_LF_mbrAdd:
+load 6 // GV_mbrAdd :: UInt
++
+store 6 // GV_mbrAdd :: UInt
+txna ApplicationArgs 1
+store 11 // v8872
+b _reachi_0
+_reachp_2:
+callsub l0_LF_wasntMeth
+txna ApplicationArgs 1
+store 11 // v8875
+b _reachi_2
+alloc:
+int 0
+txn GlobalNumUint
+==
+assert
+int 7
+txn GlobalNumByteSlice
+==
+assert
+int 0
+txn LocalNumUint
+==
+assert
+int 0
+txn LocalNumByteSlice
+==
+assert
+callsub l0_LF_wasntMeth
+int 754
+bzero
+int 0
+int 0
+updateStateNoOp:
+store 2 // GV_currentTime :: UInt
+store 1 // GV_currentStep :: UInt
+byte base64(AA==)
+dig 1
+extract 0 127
+app_global_put
+byte base64(AQ==)
+dig 1
+extract 127 127
+app_global_put
+byte base64(Ag==)
+dig 1
+extract 254 127
+app_global_put
+byte base64(Aw==)
+dig 1
+int 381
+int 127
+extract3
+app_global_put
+byte base64(BA==)
+dig 1
+int 508
+int 127
+extract3
+app_global_put
+byte base64(BQ==)
+swap
+int 635
+int 119
+extract3
+app_global_put
+byte base64()
+load 1 // GV_currentStep :: UInt
+itob
+load 2 // GV_currentTime :: UInt
+itob
+concat
+app_global_put
+txn OnCompletion
+int NoOp
+==
+assert
+// checked on completion
+callsub l54_LF_updateMbr
+b updateState
+l10_LocalSwitchK:
+load 26 // v2109
+assert
+// ^ Claim: invalid command
+// at reach standard library:57:5:application
+// at ./TRI.rsh:475:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:474:34:application call to [unknown function] (defined at: ./TRI.rsh:474:34:function exp)
+// at ./TRI.rsh:413:31:application call to [unknown function] (defined at: ./TRI.rsh:474:34:function exp)
+// at ./TRI.rsh:413:31:application call to [unknown function] (defined at: ./TRI.rsh:413:31:function exp)
+load 19 // s/1767
+int 520
+int 96
+extract3
+store 24 // arr/2130
+int 9
+bzero
+dup
+store 16 // v2131
+store 11 // midx/2132
+int 0
+store 21 // idx/2135
+l19_forTop:
+// for runs 3 times
+load 24 // arr/2130
+int 32
+load 21 // idx/2135
+*
+int 32
+extract3
+store 22 // el/2134
+load 11 // midx/2132
+byte base64(AQ==)
+load 21 // idx/2135
+itob
+concat
+load 11 // midx/2132
+int 0
+getbyte
+int 0
+==
+txn Sender
+load 22 // el/2134
+==
+&&
+select
+store 11 // midx/2132
+load 21 // idx/2135
+int 1
++
+dup
+store 21 // idx/2135
+int 3
+<
+bnz l19_forTop // for runs 3 times
+l20_forEnd:
+load 11 // midx/2132
+int 0
+getbyte
+int 1
+==
+assert
+// ^ Claim: not umvir
+// at reach standard library:57:5:application
+// at ./TRI.rsh:466:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:476:29:application call to "chkUmvir" (defined at: ./TRI.rsh:464:32:function exp)
+// at ./TRI.rsh:474:34:application call to [unknown function] (defined at: ./TRI.rsh:474:34:function exp)
+// at ./TRI.rsh:413:31:application call to [unknown function] (defined at: ./TRI.rsh:474:34:function exp)
+// at ./TRI.rsh:413:31:application call to [unknown function] (defined at: ./TRI.rsh:413:31:function exp)
+load 12 // cmd/2108
+int 0
+getbyte
+switch l22_Harvest l23_Kill l24_NewInfo l25_NewUmvirs l26_NoOp l27_Rewards
+b errl
+l11_Harvest:
+int 1
+store 26 // v2109
+b l10_LocalSwitchK
+l12_Kill:
+int 1
+store 26 // v2109
+b l10_LocalSwitchK
+l13_NewInfo:
+load 12 // cmd/2108
+extract 1 129
+dup
+store 11 // data_id/2112
+extract 0 32
+store 25 // protoFee/2113
+load 11 // data_id/2112
+extract 32 32
+store 24 // lpFee/2114
+load 11 // data_id/2112
+extract 64 32
+store 16 // totFee/2115
+load 25 // protoFee/2113
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+load 24 // lpFee/2114
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+bz l17_localIfF
+load 16 // totFee/2115
+load 24 // lpFee/2114
+load 25 // protoFee/2113
+b+
+callsub l6_LF_checkUInt256ResultLen
+b==
+store 11 // v2119
+l18_localIfK:
+load 11 // v2119
+load 16 // totFee/2115
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+load 16 // totFee/2115
+global ZeroAddress
+b>
+&&
+store 26 // v2109
+b l10_LocalSwitchK
+l14_NewUmvirs:
+int 1
+store 26 // v2109
+b l10_LocalSwitchK
+l15_NoOp:
+int 1
+store 26 // v2109
+b l10_LocalSwitchK
+l16_Rewards:
+int 1
+store 26 // v2109
+b l10_LocalSwitchK
+l17_localIfF:
+int 0
+store 11 // v2119
+b l18_localIfK
+l21_LocalSwitchK:
+load 25 // v2159
+assert
+// ^ Claim: invalid command
+// at reach standard library:57:5:application
+// at ./TRI.rsh:475:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:480:15:application call to [unknown function] (defined at: ./TRI.rsh:480:15:function exp)
+load 16 // v2131
+store 11 // midx/2182
+int 0
+store 13 // idx/2185
+l30_forTop:
+// for runs 3 times
+load 24 // arr/2130
+int 32
+load 13 // idx/2185
+*
+int 32
+extract3
+store 14 // el/2184
+load 11 // midx/2182
+byte base64(AQ==)
+load 13 // idx/2185
+itob
+concat
+load 11 // midx/2182
+int 0
+getbyte
+int 0
+==
+txn Sender
+load 14 // el/2184
+==
+&&
+select
+store 11 // midx/2182
+load 13 // idx/2185
+int 1
++
+dup
+store 13 // idx/2185
+int 3
+<
+bnz l30_forTop // for runs 3 times
+l31_forEnd:
+load 11 // midx/2182
+int 0
+getbyte
+int 1
+==
+assert
+// ^ Claim: not umvir
+// at reach standard library:57:5:application
+// at ./TRI.rsh:466:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:476:29:application call to "chkUmvir" (defined at: ./TRI.rsh:464:32:function exp)
+// at ./TRI.rsh:480:15:application call to [unknown function] (defined at: ./TRI.rsh:480:15:function exp)
+int 1
+store 13 // v2200
+byte base64(AAAAAAAACJg=)
+load 13 // v2200
+itob
+substring 7 8
+concat
+log // up to 9 bytes
+load 13 // v2200
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+load 19 // s/1767
+extract 0 1
+load 19 // s/1767
+int 1
+int 390
+extract3
+int 8
+bzero
+load 11 // midx/2182
+callsub l32_LF_fromSome
+btoi
+int 130
+*
+load 12 // cmd/2108
+replace3
+concat
+load 19 // s/1767
+int 391
+int 129
+extract3
+concat
+load 24 // arr/2130
+concat
+global Round
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+l22_Harvest:
+int 1
+store 25 // v2159
+b l21_LocalSwitchK
+l23_Kill:
+int 1
+store 25 // v2159
+b l21_LocalSwitchK
+l24_NewInfo:
+load 12 // cmd/2108
+extract 1 129
+dup
+store 11 // data_id/2162
+extract 0 32
+store 23 // protoFee/2163
+load 11 // data_id/2162
+extract 32 32
+store 22 // lpFee/2164
+load 11 // data_id/2162
+extract 64 32
+store 21 // totFee/2165
+load 23 // protoFee/2163
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+load 22 // lpFee/2164
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+bz l28_localIfF
+load 21 // totFee/2165
+load 22 // lpFee/2164
+load 23 // protoFee/2163
+b+
+callsub l6_LF_checkUInt256ResultLen
+b==
+store 11 // v2169
+l29_localIfK:
+load 11 // v2169
+load 21 // totFee/2165
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+load 21 // totFee/2165
+global ZeroAddress
+b>
+&&
+store 25 // v2159
+b l21_LocalSwitchK
+l25_NewUmvirs:
+int 1
+store 25 // v2159
+b l21_LocalSwitchK
+l26_NoOp:
+int 1
+store 25 // v2159
+b l21_LocalSwitchK
+l27_Rewards:
+int 1
+store 25 // v2159
+b l21_LocalSwitchK
+l28_localIfF:
+int 0
+store 11 // v2169
+b l29_localIfK
+l33_LocalSwitchK:
+load 22 // v2615
+assert
+// ^ Claim: invalid command
+// at reach standard library:57:5:application
+// at ./TRI.rsh:539:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:547:15:application call to [unknown function] (defined at: ./TRI.rsh:547:15:function exp)
+load 19 // s/1767
+int 520
+int 96
+extract3
+store 12 // v2636
+load 24 // oth/2613
+int 3
+<
+assert
+// ^ Claim: illegal idx
+// at reach standard library:57:5:application
+// at ./TRI.rsh:540:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:547:15:application call to [unknown function] (defined at: ./TRI.rsh:547:15:function exp)
+int 9
+bzero
+store 11 // midx/2641
+int 0
+store 13 // idx/2644
+l42_forTop:
+// for runs 3 times
+load 12 // v2636
+int 32
+load 13 // idx/2644
+*
+int 32
+extract3
+store 14 // el/2643
+load 11 // midx/2641
+byte base64(AQ==)
+load 13 // idx/2644
+itob
+concat
+load 11 // midx/2641
+int 0
+getbyte
+int 0
+==
+txn Sender
+load 14 // el/2643
+==
+&&
+select
+store 11 // midx/2641
+load 13 // idx/2644
+int 1
++
+dup
+store 13 // idx/2644
+int 3
+<
+bnz l42_forTop // for runs 3 times
+l43_forEnd:
+load 11 // midx/2641
+int 0
+getbyte
+int 1
+==
+assert
+// ^ Claim: not umvir
+// at reach standard library:57:5:application
+// at ./TRI.rsh:466:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:541:29:application call to "chkUmvir" (defined at: ./TRI.rsh:464:32:function exp)
+// at ./TRI.rsh:547:15:application call to [unknown function] (defined at: ./TRI.rsh:547:15:function exp)
+load 24 // oth/2613
+int 8
+bzero
+load 11 // midx/2641
+callsub l32_LF_fromSome
+btoi
+!=
+assert
+// ^ Claim: cannot support self
+// at reach standard library:57:5:application
+// at ./TRI.rsh:542:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:547:15:application call to [unknown function] (defined at: ./TRI.rsh:547:15:function exp)
+load 19 // s/1767
+int 1
+int 390
+extract3
+store 13 // v2658
+load 23 // data_id/2614
+sha256
+load 13 // v2658
+int 130
+load 24 // oth/2613
+*
+int 130
+extract3
+sha256
+==
+assert
+// ^ Claim: command switched
+// at reach standard library:57:5:application
+// at ./TRI.rsh:544:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./TRI.rsh:547:15:application call to [unknown function] (defined at: ./TRI.rsh:547:15:function exp)
+load 13 // v2658
+load 24 // oth/2613
+int 130
+*
+load 20 // v1750
+replace3
+store 11 // cmdsP/2668
+int 1
+store 14 // v2671
+byte base64(AAAAAAAACm8=)
+load 14 // v2671
+itob
+substring 7 8
+concat
+log // up to 9 bytes
+load 14 // v2671
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+load 23 // data_id/2614
+int 0
+getbyte
+switch l44_Harvest l45_Kill l46_NewInfo l47_NewUmvirs l48_NoOp l49_Rewards
+b errl
+l34_Harvest:
+int 1
+store 22 // v2615
+b l33_LocalSwitchK
+l35_Kill:
+int 1
+store 22 // v2615
+b l33_LocalSwitchK
+l36_NewInfo:
+load 23 // data_id/2614
+extract 1 129
+dup
+store 11 // data_id/2618
+extract 0 32
+store 21 // protoFee/2619
+load 11 // data_id/2618
+extract 32 32
+store 16 // lpFee/2620
+load 11 // data_id/2618
+extract 64 32
+store 12 // totFee/2621
+load 21 // protoFee/2619
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+load 16 // lpFee/2620
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+bz l40_localIfF
+load 12 // totFee/2621
+load 16 // lpFee/2620
+load 21 // protoFee/2619
+b+
+callsub l6_LF_checkUInt256ResultLen
+b==
+store 11 // v2625
+l41_localIfK:
+load 11 // v2625
+load 12 // totFee/2621
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+load 12 // totFee/2621
+global ZeroAddress
+b>
+&&
+store 22 // v2615
+b l33_LocalSwitchK
+l37_NewUmvirs:
+int 1
+store 22 // v2615
+b l33_LocalSwitchK
+l38_NoOp:
+int 1
+store 22 // v2615
+b l33_LocalSwitchK
+l39_Rewards:
+int 1
+store 22 // v2615
+b l33_LocalSwitchK
+l40_localIfF:
+int 0
+store 11 // v2625
+b l41_localIfK
+l44_Harvest:
+load 23 // data_id/2614
+extract 1 88
+dup
+store 13 // data_id/2698
+int 0
+extract_uint64
+store 22 // ctc/2699
+load 13 // data_id/2698
+extract 8 32
+store 21 // ctcAddr/2700
+load 13 // data_id/2698
+int 40
+extract_uint64
+store 16 // tokA/2701
+load 13 // data_id/2698
+int 48
+extract_uint64
+store 15 // tokB/2702
+load 13 // data_id/2698
+extract 56 32
+store 14 // recvr/2703
+load 19 // s/1767
+int 391
+int 129
+extract3
+store 23 // v2708
+byte base64(YXBwSUQ=)
+load 22 // ctc/2699
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 22 // ctc/2699
+// resource: R_App
+itxn_field ApplicationID
+byte base64(4NlbtQ==)
+itxn_field ApplicationArgs
+load 14 // recvr/2703
+// resource: R_Account
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 23 // v2708
+extract 65 32
+load 23 // v2708
+extract 1 32
+concat
+load 23 // v2708
+extract 97 32
+concat
+load 23 // v2708
+extract 33 32
+concat
+load 23 // v2708
+extract 0 1
+concat
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+load 22 // ctc/2699
+itxn_field Applications
+// resource: R_App
+load 16 // tokA/2701
+itxn_field Applications
+// resource: R_App
+load 15 // tokB/2702
+itxn_field Applications
+itxn_submit
+// ^ Remote: Protocol_harvest(address,(uint256,uint256,uint256,address,byte))((uint256,uint256),uint64)
+// at ./TRI.rsh:522:17:application
+// at ./TRI.rsh:507:20:application call to [unknown function] (defined at: ./TRI.rsh:511:58:function exp)
+// at ./TRI.rsh:507:20:application call to [unknown function] (defined at: ./TRI.rsh:507:20:function exp)
+// at ./TRI.rsh:549:57:application call to "evalCommand" (defined at: ./TRI.rsh:506:35:function exp)
+// at ./TRI.rsh:547:15:application call to [unknown function] (defined at: ./TRI.rsh:547:15:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 13 // v2728
+byte base64(AAAAAAAACqg=)
+load 13 // v2728
+concat
+log // up to 88 bytes
+load 13 // v2728
+dup
+store 14 // v2729
+int 0
+extract_uint64
+store 13 // v2731
+int 0
+load 13 // v2731
+==
+assert
+// ^ Claim: remote bill check
+// at ./TRI.rsh:522:17:application
+// at ./TRI.rsh:507:20:application call to [unknown function] (defined at: ./TRI.rsh:511:58:function exp)
+// at ./TRI.rsh:507:20:application call to [unknown function] (defined at: ./TRI.rsh:507:20:function exp)
+// at ./TRI.rsh:549:57:application call to "evalCommand" (defined at: ./TRI.rsh:506:35:function exp)
+// at ./TRI.rsh:547:15:application call to [unknown function] (defined at: ./TRI.rsh:547:15:function exp)
+load 19 // s/1767
+extract 0 1
+load 11 // cmdsP/2668
+concat
+load 23 // v2708
+concat
+load 12 // v2636
+concat
+global Round
+load 17 // netBalance/1771
+load 13 // v2731
++
+store 17 // netBalance/1771
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+l45_Kill:
+byte base64(AQ==)
+load 13 // v2658
+concat
+load 19 // s/1767
+int 391
+int 129
+extract3
+concat
+load 12 // v2636
+concat
+dup
+store 14 // v2754
+extract 0 1
+load 11 // cmdsP/2668
+concat
+load 14 // v2754
+int 391
+int 129
+extract3
+concat
+load 14 // v2754
+int 520
+int 96
+extract3
+concat
+global Round
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+l46_NewInfo:
+load 23 // data_id/2614
+extract 1 129
+store 14 // data_id/2763
+load 19 // s/1767
+extract 0 1
+load 13 // v2658
+concat
+load 14 // data_id/2763
+extract 128 1
+load 14 // data_id/2763
+extract 32 32
+concat
+load 14 // data_id/2763
+extract 96 32
+concat
+load 14 // data_id/2763
+extract 0 32
+concat
+load 14 // data_id/2763
+extract 64 32
+concat
+concat
+load 12 // v2636
+concat
+dup
+store 15 // v2774
+extract 0 1
+load 11 // cmdsP/2668
+concat
+load 15 // v2774
+int 391
+int 129
+extract3
+concat
+load 15 // v2774
+int 520
+int 96
+extract3
+concat
+global Round
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+l47_NewUmvirs:
+load 19 // s/1767
+extract 0 1
+load 13 // v2658
+concat
+load 19 // s/1767
+int 391
+int 129
+extract3
+concat
+load 23 // data_id/2614
+extract 1 96
+concat
+dup
+store 12 // v2789
+extract 0 1
+load 11 // cmdsP/2668
+concat
+load 12 // v2789
+int 391
+int 129
+extract3
+concat
+load 12 // v2789
+int 520
+int 96
+extract3
+concat
+global Round
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+l48_NoOp:
+load 19 // s/1767
+extract 0 1
+load 11 // cmdsP/2668
+concat
+load 19 // s/1767
+int 391
+int 129
+extract3
+concat
+load 12 // v2636
+concat
+global Round
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+l49_Rewards:
+global CurrentApplicationAddress
+balance
+global CurrentApplicationAddress
+min_balance
+-
+load 17 // netBalance/1771
+-
+l50_getActualBalance:
+dup
+store 13 // ut/2808
+// resource: R_Account
+load 23 // data_id/2614
+extract 1 32
+callsub l51_LF_makeTxn_False_False_False_True
+load 19 // s/1767
+extract 0 1
+load 11 // cmdsP/2668
+concat
+load 19 // s/1767
+int 391
+int 129
+extract3
+concat
+load 12 // v2636
+concat
+global Round
+load 13 // ut/2808
+load 17 // netBalance/1771
++
+load 13 // ut/2808
+-
+store 17 // netBalance/1771
+store 18 // thisConsensusTime/1768
+store 19 // s/1767
+b _reachl_1
+l4_localIfF:
+int 0
+store 15 // v1739
+b l5_localIfK
+l52_ifF:
+l53_LF_svsDump_3:
+load 20 // v1750
+load 19 // s/1767
+concat
+load 17 // netBalance/1771
+itob
+concat
+int 3
+global Round
+b updateStateNoOp
+l56_LF_makeTxnK_False_True:
+int 0
+itxn_field Fee
+int pay
+itxn_field TypeEnum
+itxn_field Receiver
+itxn_field Amount
+itxn_submit
+retsub
+l7_Umvir_propose0_270:
+b _api_Umvir_propose2
+l8_Umvir_support0_270:
+load 16 // .fork270.msg/2100
+extract 1 138
+store 11 // data_id/2482
+b _api_Umvir_support2
+l9_register0_270:
+load 16 // .fork270.msg/2100
+extract 1 24
+store 11 // data_id/2861
+b _api_register2
+register_uint64_1KepGsPO1ESZ5X2VqMBpjs1LQU4JKiEnWzSlCL1cyuU_:
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+btoi
+txna ApplicationArgs 3
+btoi
+store 11 // v8863
+store 12 // v8862
+store 13 // v8861
+b _reacha_register
+updateMbr_eq:
+pop
+retsub
+updateMbr_neg:
+swap
+-
+dup
+store 6 // GV_mbrAdd :: UInt
+global CreatorAddress
+callsub l51_LF_makeTxn_False_False_False_True
+retsub
+updateMbr_pos_eq:
+-
+dup
+bz updateMbr_eq
+dup
+store 6 // GV_mbrAdd :: UInt
+l57_LF_checkTxn_False:
+// resource: R_Txn
+txn GroupIndex
+load 0 // GV_txnCounter :: UInt
+int 1
++
+dup
+store 0 // GV_txnCounter :: UInt
+-
+dupn 2
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+gtxns TypeEnum
+int pay
+==
+assert
+gtxns Amount
+==
+assert
+retsub
+l6_LF_checkUInt256ResultLen:
+dup
+len
+int 32
+swap
+-
+bzero
+swap
+concat
+retsub
+l0_LF_wasntMeth:
+int 1
+store 3 // GV_wasntMeth :: Bool
+retsub
+l54_LF_updateMbr:
+load 6 // GV_mbrAdd :: UInt
+load 7 // GV_mbrSub :: UInt
+dup2
+>=
+bz updateMbr_neg
+b updateMbr_pos_eq
+l51_LF_makeTxn_False_False_False_True:
+itxn_begin
+b l56_LF_makeTxnK_False_True
+l3_LF_timeCheck:
+dup
+int 0
+==
+swap
+load 2 // GV_currentTime :: UInt
+==
+||
+assert
+retsub
+l32_LF_fromSome:
+dup
+extract 1 0
+swap
+int 0
+getbyte
+select
+retsub
+l2_LF_svsLoad_3:
+dup
+extract 0 130
+store 20 // v1750
+dup
+int 130
+int 616
+extract3
+store 19 // s/1767
+int 746
+extract_uint64
+store 17 // netBalance/1771
+retsub
+l55_LF_makeTxn_False_True_False_True:
+itxn_begin
+itxn_field CloseRemainderTo
+b l56_LF_makeTxnK_False_True

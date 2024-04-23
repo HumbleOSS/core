@@ -1,0 +1,4901 @@
+#pragma version 9
+// resource: R_Txn
+txn ApplicationID
+bz alloc
+byte base64()
+app_global_get
+dup
+int 0
+extract_uint64
+store 1 // GV_currentStep :: UInt
+dup
+int 8
+extract_uint64
+store 2 // GV_currentTime :: UInt
+int 16
+extract_uint64
+store 5 // GV_companion :: Contract
+byte base64(AA==)
+app_global_get
+byte base64(AQ==)
+app_global_get
+concat
+byte base64(Ag==)
+app_global_get
+concat
+byte base64(Aw==)
+app_global_get
+concat
+byte base64(BA==)
+app_global_get
+concat
+byte base64(BQ==)
+app_global_get
+concat
+preamble:
+pushbytess base64(DfjlMA==) base64(EHcoJA==) base64(HFN4rQ==) base64(Hzxzyw==) base64(JrGGIQ==) base64(KuIbLA==) base64(Uh4tYQ==) base64(U1nExQ==) base64(ZDbc4A==) base64(ZX0T7A==) base64(bpSF9w==) base64(bsxyJA==) base64(c+W3Fw==) base64(gVVLUQ==) base64(guVzxA==) base64(nLvtuw==) base64(qhGahg==) base64(r9Wr4Q==) base64(tq4aJQ==) base64(u7MZ8w==) base64(0KHMFQ==) base64(1ZOwjg==) base64(4NlbtQ==) base64(7JlgQQ==) base64(82tNvw==)
+txna ApplicationArgs 0
+match _reachp_3 Provider_depositH_lUu_b76da9lpTYndpmWANRCFYxfvBmIBxJ18lB6vk_ arc200_approve_aB7vxbW4PSDQsylrpf8z0pJ5DG0KY_ArfOZuMRX9a63o_ _reachp_0 Trader_swapBForAgDc4y5UaIepDBCha2YvC_uW3OPbfBj0i7kA7ZDxBev0_ createAllowanceB2ROxfIcz_6R_ep0_0Zc22AicK3l09Apm43_rPuKslYA_ supportsInterfac_blIJMxxpZoFW0kYet05ih6kJ8AxwWfFqb_RXVfbNHw_ hasBox__byte_bytMsf4xzxj5kyULYB6GEX3TQ_tTiyGJkl0YbtlZ_3neR8_ arc200_decimals_0i3zaAdWGk8HTrh900e3z__BopVJHiDErU4VQKq4WR4_ arc200_name__bytiUdKDeBB_7Wod3lAotr0fjTghvzrL3y_c3feTU4zUwo_ Info____uint256_SdTVAB2_t3_CVGeBjghGTWjGfKpFlInrwWiUwqbR5_U_ _reachp_2 Protocol_delete_kfVi1BkG_JUE2qDGX3adK_adarE_sUe_e7VtlL5iY04_ Trader_exactSwapZrHK_R7X0W7Cyto9qM2sQdcCWKEdNCmfBPhfmOyXXY0_ arc200_balanceOfAuLlni3r2JwN05I0cJndHjbQh_B7u8HtXeT2u87KRQA_ Trader_swapAForBgm4HUzqTvI4dyc8oU9trVMnRr0mR9SlvVjuElkCQs_s_ Trader_exactSwapnqXGUxJUBUDg6wzTA68II8TmKXHgAxxdmvlr1F7NJQE_ Provider_withdraND17rr_Xm1rvFtb25g7w08fPbaQIK6Vaw_5b3hiaCiw_ arc200_symbol__bRs3rJdpYyd5U9jg4y_u6hZgTc3UoO_SmNhgJJ2m0lrY_ arc200_allowanceAcq4c8hE24gt_EoooVBPqZqn0ii698pjkLnoeezacoY_ arc200_transferF8dq513jzwlGNyuNOIzPPYDtVSgiLxnp3MTKwA15nTo4_ createBalanceBox6WjVaipFnU7QzuD86P3ftF8jYdZZhB6hQJa4ey35iD0_ Protocol_harvestMbyVhU_QHnWaxbrgWPKQ3dO5hMBargMiHb3TFBIMjM4_ arc200_totalSupp2vgBT0Wqe9Jv1e5PQOIiaRDt7ILIY6S8h4wVn48Sh2s_ arc200_transfer_mW6YBiBj2tVEDo94HJlsKqWJTJtaEhfhx1b4rELoCvQ_
+errl:
+err
+Info____uint256_SdTVAB2_t3_CVGeBjghGTWjGfKpFlInrwWiUwqbR5_U_:
+// CompanionLabel False "Info____uint256_SdTVAB2_t3_CVGeBjghGTWjGfKpFlInrwWiUwqbR5_U_"
+_reacha_Info:
+// CompanionLabel False "_reacha_Info"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l2_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:429:11:property binding
+callsub l3_LF_svsLoad_2
+load 20 // s/15024
+extract 1 64
+load 20 // s/15024
+extract 65 64
+concat
+load 20 // s/15024
+extract 193 129
+concat
+load 20 // s/15024
+extract 129 64
+concat
+load 26 // v14967
+itob
+concat
+load 27 // v14965
+itob
+concat
+store 4 // GV_apiRet :: Null
+apiReturn_check:
+txn OnCompletion
+int NoOp
+==
+assert
+// checked on completion
+apiReturn_noCheck:
+byte base64(FR98dQ==)
+load 4 // GV_apiRet :: Null
+concat
+log // up to 341 bytes
+done:
+int 1
+return
+Protocol_delete_kfVi1BkG_JUE2qDGX3adK_adarE_sUe_e7VtlL5iY04_:
+// CompanionLabel False "Protocol_delete_kfVi1BkG_JUE2qDGX3adK_adarE_sUe_e7VtlL5iY04_"
+_reacha_Protocol_delete:
+// CompanionLabel False "_reacha_Protocol_delete"
+int 8
+bzero
+store 11 // v63315
+_reachi_2:
+// CompanionLabel False "_reachi_2"
+int 2
+load 1 // GV_currentStep :: UInt
+==
+assert
+callsub l3_LF_svsLoad_2
+load 11 // v63315
+int 0
+extract_uint64
+store 12 // v63314
+byte base64(xR/DVw==)
+load 12 // v63314
+itob
+concat
+log // up to 12 bytes
+// ^ log: "_reach_e2" [v63314,.api14905.dom/33002] "_reach_e2(uint64,())"
+load 12 // v63314
+callsub l21_LF_timeCheck
+_api_Protocol_delete2:
+// CompanionLabel True "_api_Protocol_delete2"
+byte base64()
+store 11 // v33005
+byte base64(AAAAAAAAgO0=)
+load 11 // v33005
+concat
+log // up to 8 bytes
+load 11 // v33005
+store 4 // GV_apiRet :: Null
+// CompanionDeletePre
+updateStateHalt:
+txn OnCompletion
+int DeleteApplication
+==
+assert
+// checked on completion
+// CompanionDelete
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 5 // GV_companion :: Contract
+itxn_field ApplicationID
+int DeleteApplication
+itxn_field OnCompletion
+itxn_submit
+// cost credit: 3
+int 100000
+l54_LF_mbrSub:
+load 7 // GV_mbrSub :: UInt
++
+store 7 // GV_mbrSub :: UInt
+callsub l55_LF_updateMbr
+// resource: R_Account
+int 0
+global CurrentApplicationAddress
+global CreatorAddress
+callsub l56_LF_makeTxn_False_True_False_True
+updateState:
+load 3 // GV_wasntMeth :: Bool
+bnz done
+b apiReturn_noCheck
+Protocol_harvestMbyVhU_QHnWaxbrgWPKQ3dO5hMBargMiHb3TFBIMjM4_:
+// CompanionLabel False "Protocol_harvestMbyVhU_QHnWaxbrgWPKQ3dO5hMBargMiHb3TFBIMjM4_"
+txna ApplicationArgs 1
+txna ApplicationArgs 2
+store 11 // v63204
+store 12 // v63203
+_reacha_Protocol_harvest:
+// CompanionLabel False "_reacha_Protocol_harvest"
+int 8
+bzero
+byte base64(AA==)
+load 12 // v63203
+load 11 // v63204
+concat
+concat
+concat
+store 11 // v63318
+_reachi_3:
+// CompanionLabel False "_reachi_3"
+int 4
+load 1 // GV_currentStep :: UInt
+==
+assert
+callsub l4_LF_svsLoad_4
+load 11 // v63318
+int 0
+extract_uint64
+store 12 // v63317
+load 11 // v63318
+extract 8 162
+store 13 // .fork9425.msg/15962
+byte base64(rQu+RA==)
+load 12 // v63317
+itob
+concat
+load 13 // .fork9425.msg/15962
+concat
+log // up to 174 bytes
+// ^ log: "_reach_e3" [v63317,.fork9425.msg/15962] "_reach_e3(uint64,(byte,byte[161]))"
+load 12 // v63317
+callsub l21_LF_timeCheck
+load 13 // .fork9425.msg/15962
+int 0
+getbyte
+switch l26_Protocol_harvest0_9425 l27_Provider_deposit0_9425 l28_Provider_withdraw0_9425 l29_Trader_exactSwapAForB0_9425 l30_Trader_exactSwapBForA0_9425 l31_Trader_swapAForB0_9425 l32_Trader_swapBForA0_9425 l33_arc200_approve0_9425 l34_arc200_transfer0_9425 l35_arc200_transferFrom0_9425 l36_createAllowanceBox0_9425 l37_createBalanceBox0_9425
+b errl
+Provider_depositH_lUu_b76da9lpTYndpmWANRCFYxfvBmIBxJ18lB6vk_:
+// CompanionLabel False "Provider_depositH_lUu_b76da9lpTYndpmWANRCFYxfvBmIBxJ18lB6vk_"
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+txna ApplicationArgs 3
+store 11 // v63213
+store 12 // v63212
+store 13 // v63211
+_reacha_Provider_deposit:
+// CompanionLabel False "_reacha_Provider_deposit"
+int 8
+bzero
+byte base64(AQ==)
+load 13 // v63211
+itob
+substring 7 8
+load 12 // v63212
+concat
+load 11 // v63213
+concat
+concat
+int 64
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+Provider_withdraND17rr_Xm1rvFtb25g7w08fPbaQIK6Vaw_5b3hiaCiw_:
+// CompanionLabel False "Provider_withdraND17rr_Xm1rvFtb25g7w08fPbaQIK6Vaw_5b3hiaCiw_"
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+txna ApplicationArgs 3
+store 11 // v63223
+store 12 // v63222
+store 13 // v63221
+_reacha_Provider_withdraw:
+// CompanionLabel False "_reacha_Provider_withdraw"
+int 8
+bzero
+byte base64(Ag==)
+load 13 // v63221
+itob
+substring 7 8
+load 12 // v63222
+concat
+load 11 // v63223
+concat
+concat
+int 64
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+Trader_exactSwapZrHK_R7X0W7Cyto9qM2sQdcCWKEdNCmfBPhfmOyXXY0_:
+// CompanionLabel False "Trader_exactSwapZrHK_R7X0W7Cyto9qM2sQdcCWKEdNCmfBPhfmOyXXY0_"
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+txna ApplicationArgs 3
+store 11 // v63243
+store 12 // v63242
+store 13 // v63241
+_reacha_Trader_exactSwapBForA:
+// CompanionLabel False "_reacha_Trader_exactSwapBForA"
+int 8
+bzero
+byte base64(BA==)
+load 13 // v63241
+itob
+substring 7 8
+load 12 // v63242
+concat
+load 11 // v63243
+concat
+concat
+int 96
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+Trader_exactSwapnqXGUxJUBUDg6wzTA68II8TmKXHgAxxdmvlr1F7NJQE_:
+// CompanionLabel False "Trader_exactSwapnqXGUxJUBUDg6wzTA68II8TmKXHgAxxdmvlr1F7NJQE_"
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+txna ApplicationArgs 3
+store 11 // v63233
+store 12 // v63232
+store 13 // v63231
+_reacha_Trader_exactSwapAForB:
+// CompanionLabel False "_reacha_Trader_exactSwapAForB"
+int 8
+bzero
+byte base64(Aw==)
+load 13 // v63231
+itob
+substring 7 8
+load 12 // v63232
+concat
+load 11 // v63233
+concat
+concat
+int 96
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+Trader_swapAForBgm4HUzqTvI4dyc8oU9trVMnRr0mR9SlvVjuElkCQs_s_:
+// CompanionLabel False "Trader_swapAForBgm4HUzqTvI4dyc8oU9trVMnRr0mR9SlvVjuElkCQs_s_"
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+txna ApplicationArgs 3
+store 11 // v63253
+store 12 // v63252
+store 13 // v63251
+_reacha_Trader_swapAForB:
+// CompanionLabel False "_reacha_Trader_swapAForB"
+int 8
+bzero
+byte base64(BQ==)
+load 13 // v63251
+itob
+substring 7 8
+load 12 // v63252
+concat
+load 11 // v63253
+concat
+concat
+int 96
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+Trader_swapBForAgDc4y5UaIepDBCha2YvC_uW3OPbfBj0i7kA7ZDxBev0_:
+// CompanionLabel False "Trader_swapBForAgDc4y5UaIepDBCha2YvC_uW3OPbfBj0i7kA7ZDxBev0_"
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 2
+txna ApplicationArgs 3
+store 11 // v63263
+store 12 // v63262
+store 13 // v63261
+_reacha_Trader_swapBForA:
+// CompanionLabel False "_reacha_Trader_swapBForA"
+int 8
+bzero
+byte base64(Bg==)
+load 13 // v63261
+itob
+substring 7 8
+load 12 // v63262
+concat
+load 11 // v63263
+concat
+concat
+int 96
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+_api_Protocol_harvest3:
+// CompanionLabel True "_api_Protocol_harvest3"
+load 11 // data_id/15965
+extract 0 32
+store 13 // to_/15982
+load 11 // data_id/15965
+extract 32 129
+store 12 // protoInfoP/15983
+txn Sender
+load 20 // s/15024
+extract 193 129
+extract 96 32
+==
+assert
+// ^ Claim: Thou art not the Protocol
+// at reach standard library:57:5:application
+// at ./index.rsh:752:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:766:21:application call to "chkProtoAddr" (defined at: ./index.rsh:751:42:function exp)
+// at ./index.rsh:769:15:application call to [unknown function] (defined at: ./index.rsh:769:15:function exp)
+load 12 // protoInfoP/15983
+extract 0 32
+store 32 // protoFee/15989
+load 12 // protoInfoP/15983
+extract 32 32
+store 31 // lpFee/15990
+load 12 // protoInfoP/15983
+extract 64 32
+store 30 // totFee/15991
+load 32 // protoFee/15989
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+load 31 // lpFee/15990
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+bz l38_localIfF
+load 30 // totFee/15991
+load 31 // lpFee/15990
+load 32 // protoFee/15989
+b+
+callsub l24_LF_checkUInt256ResultLen
+b==
+store 11 // v15995
+l39_localIfK:
+load 11 // v15995
+load 30 // totFee/15991
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+load 30 // totFee/15991
+global ZeroAddress
+b>
+&&
+assert
+// ^ Claim
+// at reach standard library:57:5:application
+// at ./index.rsh:318:29:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:767:16:application call to "chkFees" (defined at: ./index.rsh:318:21:function exp)
+// at ./index.rsh:769:15:application call to [unknown function] (defined at: ./index.rsh:769:15:function exp)
+global CurrentApplicationAddress
+balance
+global CurrentApplicationAddress
+min_balance
+-
+load 18 // netBalance/15028
+-
+l40_getActualBalance:
+dup
+store 29 // r/16006
+// resource: R_Account
+load 13 // to_/15982
+callsub l41_LF_makeTxn_False_False_False_True
+load 20 // s/15024
+extract 129 64
+dup
+store 15 // v16012
+extract 0 32
+store 11 // v16013
+load 15 // v16012
+extract 32 32
+store 28 // v16014
+load 11 // v16013
+load 28 // v16014
+concat
+load 29 // r/16006
+itob
+concat
+store 15 // v16016
+byte base64(AAAAAAAAPpA=)
+load 15 // v16016
+concat
+log // up to 80 bytes
+load 15 // v16016
+store 4 // GV_apiRet :: Null
+byte base64(2nAluQ==)
+store 16 // v16049
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+// resource: R_App
+itxn_field ApplicationID
+load 16 // v16049
+itxn_field ApplicationArgs
+load 13 // to_/15982
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 11 // v16013
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:773:33:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:769:15:application call to [unknown function] (defined at: ./index.rsh:769:15:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 15 // v16050
+byte base64(AAAAAAAAPrI=)
+load 15 // v16050
+concat
+log // up to 17 bytes
+load 15 // v16050
+dup
+store 11 // v16051
+int 0
+extract_uint64
+store 15 // v16053
+int 0
+load 15 // v16053
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:773:33:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:769:15:application call to [unknown function] (defined at: ./index.rsh:769:15:function exp)
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+// resource: R_App
+itxn_field ApplicationID
+load 16 // v16049
+itxn_field ApplicationArgs
+load 13 // to_/15982
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 28 // v16014
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:774:33:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:769:15:application call to [unknown function] (defined at: ./index.rsh:769:15:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 11 // v16069
+byte base64(AAAAAAAAPsU=)
+load 11 // v16069
+concat
+log // up to 17 bytes
+load 11 // v16069
+dup
+store 13 // v16070
+int 0
+extract_uint64
+store 11 // v16072
+int 0
+load 11 // v16072
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:774:33:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:769:15:application call to [unknown function] (defined at: ./index.rsh:769:15:function exp)
+load 32 // protoFee/15989
+load 31 // lpFee/15990
+concat
+load 30 // totFee/15991
+concat
+load 12 // protoInfoP/15983
+extract 96 32
+concat
+load 12 // protoInfoP/15983
+extract 128 1
+concat
+store 13 // v16084
+byte base64(UujsDQ==)
+load 13 // v16084
+concat
+log // up to 133 bytes
+// ^ log: "HarvestEvent" [v16084] "HarvestEvent((uint256,uint256,uint256,address,byte))"
+load 20 // s/15024
+extract 0 1
+load 17 // lptBals/15138
+concat
+load 14 // poolBals/15143
+concat
+load 21 // v15020
+concat
+load 12 // protoInfoP/15983
+concat
+global Round
+load 29 // r/16006
+load 18 // netBalance/15028
++
+load 29 // r/16006
+-
+load 15 // v16053
++
+load 11 // v16072
++
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+_reachl_1:
+// CompanionLabel False "_reachl_1"
+load 20 // s/15024
+extract 0 1
+btoi
+bz l51_ifF
+l52_LF_svsDump_2:
+load 27 // v14965
+itob
+load 26 // v14967
+itob
+concat
+load 24 // meta/14978
+concat
+load 20 // s/15024
+concat
+int 328
+bzero
+concat
+int 2
+global Round
+updateStateNoOp:
+store 2 // GV_currentTime :: UInt
+store 1 // GV_currentStep :: UInt
+byte base64(AA==)
+dig 1
+extract 0 127
+app_global_put
+byte base64(AQ==)
+dig 1
+extract 127 127
+app_global_put
+byte base64(Ag==)
+dig 1
+extract 254 127
+app_global_put
+byte base64(Aw==)
+dig 1
+int 381
+int 127
+extract3
+app_global_put
+byte base64(BA==)
+dig 1
+int 508
+int 127
+extract3
+app_global_put
+byte base64(BQ==)
+swap
+int 635
+int 71
+extract3
+app_global_put
+byte base64()
+load 1 // GV_currentStep :: UInt
+itob
+load 2 // GV_currentTime :: UInt
+itob
+concat
+load 5 // GV_companion :: Contract
+itob
+concat
+app_global_put
+txn OnCompletion
+int NoOp
+==
+assert
+// checked on completion
+callsub l55_LF_updateMbr
+b updateState
+_api_Provider_deposit3:
+// CompanionLabel True "_api_Provider_deposit3"
+callsub l42_LF_companionCall
+// cost credit: 3
+load 11 // data_id/17381
+extract 1 64
+store 12 // inBals/17513
+load 20 // s/15024
+extract 193 129
+dup
+store 29 // v17515
+extract 128 1
+btoi
+!
+assert
+// ^ Claim: locked
+// at reach standard library:57:5:application
+// at ./index.rsh:804:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+load 12 // inBals/17513
+extract 0 32
+store 17 // x/17520
+load 12 // inBals/17513
+extract 32 32
+store 13 // x/17521
+load 15 // z/15140
+global ZeroAddress
+b==
+bz l43_localIfF
+load 17 // x/17520
+load 13 // x/17521
+b*
+callsub l24_LF_checkUInt256ResultLen
+bsqrt
+callsub l24_LF_checkUInt256ResultLen
+store 28 // b/17519
+l44_localIfK:
+load 11 // data_id/17381
+extract 65 32
+load 28 // b/17519
+b<=
+assert
+// ^ Claim: slippage
+// at reach standard library:57:5:application
+// at ./index.rsh:806:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+load 22 // v15006
+txn Sender
+!=
+assert
+// ^ Claim: ARC200: Transfer to self
+// at reach standard library:57:5:application
+// at ./index.rsh:584:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:807:20:application call to "chkTransfer" (defined at: ./index.rsh:583:50:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 22 // v15006
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+dup
+store 12 // v17550
+load 28 // b/17519
+b>=
+assert
+// ^ Claim: ARC200: Transfer amount must not be greater than balance
+// at reach standard library:57:5:application
+// at ./index.rsh:585:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:807:20:application call to "chkTransfer" (defined at: ./index.rsh:583:50:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+load 11 // data_id/17381
+extract 0 1
+btoi
+bz l45_ifF
+byte base64(AAAAAAAARG8=)
+load 28 // b/17519
+concat
+log // up to 40 bytes
+load 28 // b/17519
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_Provider_withdraw3:
+// CompanionLabel True "_api_Provider_withdraw3"
+callsub l42_LF_companionCall
+// cost credit: 3
+load 11 // data_id/18797
+extract 1 32
+store 28 // b/19092
+load 11 // data_id/18797
+extract 33 64
+store 17 // outsl/19093
+load 14 // poolBals/15143
+extract 0 32
+store 13 // y/19097
+load 14 // poolBals/15143
+extract 32 32
+store 12 // y/19098
+load 28 // b/19092
+load 13 // y/19097
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 15 // z/15140
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 29 // b/19103
+load 28 // b/19092
+load 12 // y/19098
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 15 // z/15140
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 14 // b/19108
+load 17 // outsl/19093
+extract 0 32
+load 29 // b/19103
+b<=
+assert
+// ^ Claim: Duoswap: Provider Withdraw Slippage A
+// at reach standard library:57:5:application
+// at ./index.rsh:846:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+load 17 // outsl/19093
+extract 32 32
+load 14 // b/19108
+b<=
+assert
+// ^ Claim: Duoswap: Provider Withdraw Slippage B
+// at reach standard library:57:5:application
+// at ./index.rsh:847:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+txn Sender
+load 22 // v15006
+!=
+assert
+// ^ Claim: ARC200: Transfer to self
+// at reach standard library:57:5:application
+// at ./index.rsh:584:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:848:20:application call to "chkTransfer" (defined at: ./index.rsh:583:50:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+txn Sender
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+dup
+store 17 // v19120
+load 28 // b/19092
+b>=
+assert
+// ^ Claim: ARC200: Transfer amount must not be greater than balance
+// at reach standard library:57:5:application
+// at ./index.rsh:585:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:848:20:application call to "chkTransfer" (defined at: ./index.rsh:583:50:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+load 11 // data_id/18797
+extract 0 1
+btoi
+bz l46_ifF
+load 29 // b/19103
+load 14 // b/19108
+concat
+store 11 // v19126
+byte base64(AAAAAAAASrY=)
+load 11 // v19126
+concat
+log // up to 72 bytes
+load 11 // v19126
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_Trader_exactSwapAForB3:
+// CompanionLabel True "_api_Trader_exactSwapAForB3"
+callsub l42_LF_companionCall
+callsub l42_LF_companionCall
+// cost credit: 3
+// cost credit: 3
+load 11 // data_id/20213
+extract 1 32
+store 28 // value_/20654
+load 11 // data_id/20213
+extract 33 32
+store 16 // value_/20655
+load 20 // s/15024
+extract 193 129
+store 15 // protoInfo/20658
+load 14 // poolBals/15143
+extract 0 32
+store 13 // a/20660
+load 14 // poolBals/15143
+extract 32 32
+store 12 // y/20661
+load 15 // protoInfo/20658
+extract 0 32
+store 34 // protoFee/20662
+load 15 // protoInfo/20658
+extract 64 32
+store 30 // totFee/20663
+load 12 // y/20661
+load 16 // value_/20655
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 14 // reserveOutP_b/20664
+load 16 // value_/20655
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+load 30 // totFee/20663
+b+
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 13 // a/20660
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // reserveOutP_b/20664
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+b/
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=)
+b+
+callsub l24_LF_checkUInt256ResultLen
+store 29 // _/20670
+load 28 // value_/20654
+load 29 // _/20670
+b>=
+assert
+// ^ Claim: provided enough funds to receive amt out
+// at reach standard library:57:5:application
+// at ./index.rsh:175:12:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:172:25:application call to [unknown function] (defined at: ./index.rsh:173:20:function exp)
+// at ./index.rsh:172:25:application call to [unknown function] (defined at: ./index.rsh:172:25:function exp)
+// at ./index.rsh:189:63:application call to "computeAmtInAndOut" (defined at: ./index.rsh:171:3:function exp)
+// at ./index.rsh:251:19:application call to "computeSwap1" (defined at: ./index.rsh:185:75:function exp)
+// at ./index.rsh:940:58:application call to "computeSwap" (defined at: ./index.rsh:247:71:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1067:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+load 28 // value_/20654
+load 29 // _/20670
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 33 // value_/20673
+load 13 // a/20660
+load 29 // _/20670
+b+
+callsub l24_LF_checkUInt256ResultLen
+store 32 // z/20682
+load 29 // _/20670
+load 12 // y/20661
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 32 // z/20682
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 16 // value_/20655
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 34 // protoFee/20662
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 30 // totFee/20663
+b/
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 31 // protoFeeOut/20691
+load 29 // _/20670
+load 34 // protoFee/20662
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 30 // protoFeeIn/20693
+global ZeroAddress
+load 31 // protoFeeOut/20691
+concat
+load 30 // protoFeeIn/20693
+global ZeroAddress
+concat
+load 30 // protoFeeIn/20693
+load 12 // y/20661
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 32 // z/20682
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 31 // protoFeeOut/20691
+b>
+select
+dup
+store 29 // poolToProto/20702
+extract 0 32
+store 32 // b/20704
+load 29 // poolToProto/20702
+extract 32 32
+store 31 // b/20705
+load 15 // protoInfo/20658
+extract 128 1
+btoi
+!
+assert
+// ^ Claim: locked
+// at reach standard library:57:5:application
+// at ./index.rsh:894:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1067:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+load 13 // a/20660
+load 28 // value_/20654
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 33 // value_/20673
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 32 // b/20704
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 30 // A/20733
+load 14 // reserveOutP_b/20664
+load 31 // b/20705
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 29 // B/20736
+load 20 // s/15024
+extract 129 64
+store 14 // b1/20738
+global ZeroAddress
+load 33 // value_/20673
+b<=
+global ZeroAddress
+load 16 // value_/20655
+b<=
+&&
+assert
+// ^ Claim: slippage
+// at reach standard library:57:5:application
+// at ./index.rsh:909:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1067:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+load 30 // A/20733
+load 29 // B/20736
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 13 // a/20660
+load 12 // y/20661
+b*
+callsub l24_LF_checkUInt256ResultLen
+b>=
+assert
+// ^ Claim: constant product
+// at reach standard library:57:5:application
+// at ./index.rsh:918:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1067:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+load 33 // value_/20673
+load 16 // value_/20655
+concat
+store 13 // v20764
+load 30 // A/20733
+load 29 // B/20736
+concat
+store 12 // v20765
+load 14 // b1/20738
+extract 0 32
+load 32 // b/20704
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 14 // b1/20738
+extract 32 32
+load 31 // b/20705
+b+
+callsub l24_LF_checkUInt256ResultLen
+concat
+store 29 // v20766
+load 11 // data_id/20213
+extract 0 1
+btoi
+bz l47_ifF
+byte base64(AAAAAAAAURw=)
+load 13 // v20764
+concat
+log // up to 72 bytes
+load 13 // v20764
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_Trader_exactSwapBForA3:
+// CompanionLabel True "_api_Trader_exactSwapBForA3"
+callsub l42_LF_companionCall
+callsub l42_LF_companionCall
+// cost credit: 3
+// cost credit: 3
+load 11 // data_id/21629
+extract 1 32
+store 28 // value_/22283
+load 11 // data_id/21629
+extract 33 32
+store 16 // value_/22284
+load 20 // s/15024
+extract 193 129
+store 15 // protoInfo/22287
+load 14 // poolBals/15143
+extract 32 32
+store 13 // a/22289
+load 14 // poolBals/15143
+extract 0 32
+store 12 // y/22290
+load 15 // protoInfo/22287
+extract 0 32
+store 34 // protoFee/22291
+load 15 // protoInfo/22287
+extract 64 32
+store 30 // totFee/22292
+load 12 // y/22290
+load 16 // value_/22284
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 14 // reserveOutP_b/22293
+load 16 // value_/22284
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+load 30 // totFee/22292
+b+
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 13 // a/22289
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // reserveOutP_b/22293
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+b/
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=)
+b+
+callsub l24_LF_checkUInt256ResultLen
+store 29 // _/22299
+load 28 // value_/22283
+load 29 // _/22299
+b>=
+assert
+// ^ Claim: provided enough funds to receive amt out
+// at reach standard library:57:5:application
+// at ./index.rsh:175:12:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:172:25:application call to [unknown function] (defined at: ./index.rsh:173:20:function exp)
+// at ./index.rsh:172:25:application call to [unknown function] (defined at: ./index.rsh:172:25:function exp)
+// at ./index.rsh:189:63:application call to "computeAmtInAndOut" (defined at: ./index.rsh:171:3:function exp)
+// at ./index.rsh:260:19:application call to "computeSwap1" (defined at: ./index.rsh:185:75:function exp)
+// at ./index.rsh:940:58:application call to "computeSwap" (defined at: ./index.rsh:247:71:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1079:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+load 28 // value_/22283
+load 29 // _/22299
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 33 // value_/22302
+load 13 // a/22289
+load 29 // _/22299
+b+
+callsub l24_LF_checkUInt256ResultLen
+store 32 // z/22311
+load 29 // _/22299
+load 12 // y/22290
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 32 // z/22311
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 16 // value_/22284
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 34 // protoFee/22291
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 30 // totFee/22292
+b/
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 31 // protoFeeOut/22320
+load 29 // _/22299
+load 34 // protoFee/22291
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 30 // protoFeeIn/22322
+global ZeroAddress
+load 31 // protoFeeOut/22320
+concat
+load 30 // protoFeeIn/22322
+global ZeroAddress
+concat
+load 30 // protoFeeIn/22322
+load 12 // y/22290
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 32 // z/22311
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 31 // protoFeeOut/22320
+b>
+select
+dup
+store 29 // poolToProto/22331
+extract 0 32
+store 32 // b/22333
+load 29 // poolToProto/22331
+extract 32 32
+store 31 // b/22334
+load 15 // protoInfo/22287
+extract 128 1
+btoi
+!
+assert
+// ^ Claim: locked
+// at reach standard library:57:5:application
+// at ./index.rsh:894:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1079:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+load 14 // reserveOutP_b/22293
+load 31 // b/22334
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 30 // A/22362
+load 13 // a/22289
+load 28 // value_/22283
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 33 // value_/22302
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 32 // b/22333
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 29 // B/22365
+load 20 // s/15024
+extract 129 64
+store 14 // b1/22367
+global ZeroAddress
+load 16 // value_/22284
+b<=
+global ZeroAddress
+load 33 // value_/22302
+b<=
+&&
+assert
+// ^ Claim: slippage
+// at reach standard library:57:5:application
+// at ./index.rsh:909:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1079:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+load 30 // A/22362
+load 29 // B/22365
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 12 // y/22290
+load 13 // a/22289
+b*
+callsub l24_LF_checkUInt256ResultLen
+b>=
+assert
+// ^ Claim: constant product
+// at reach standard library:57:5:application
+// at ./index.rsh:918:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1079:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+load 16 // value_/22284
+load 33 // value_/22302
+concat
+store 13 // v22393
+load 30 // A/22362
+load 29 // B/22365
+concat
+store 12 // v22394
+load 14 // b1/22367
+extract 0 32
+load 31 // b/22334
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 14 // b1/22367
+extract 32 32
+load 32 // b/22333
+b+
+callsub l24_LF_checkUInt256ResultLen
+concat
+store 29 // v22395
+load 11 // data_id/21629
+extract 0 1
+btoi
+bz l48_ifF
+byte base64(AAAAAAAAV3k=)
+load 13 // v22393
+concat
+log // up to 72 bytes
+load 13 // v22393
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_Trader_swapAForB3:
+// CompanionLabel True "_api_Trader_swapAForB3"
+callsub l42_LF_companionCall
+callsub l42_LF_companionCall
+// cost credit: 3
+// cost credit: 3
+load 11 // data_id/23045
+extract 1 32
+store 16 // value_/23912
+load 20 // s/15024
+extract 193 129
+store 15 // protoInfo/23917
+load 14 // poolBals/15143
+extract 0 32
+store 13 // a/23919
+load 14 // poolBals/15143
+extract 32 32
+store 12 // y/23920
+load 15 // protoInfo/23917
+extract 0 32
+store 28 // protoFee/23921
+load 15 // protoInfo/23917
+extract 64 32
+store 29 // totFee/23922
+load 16 // value_/23912
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+load 29 // totFee/23922
+b-
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+dup
+store 14 // amtInFee_b/23924
+load 12 // y/23920
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 13 // a/23919
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // amtInFee_b/23924
+b+
+callsub l24_LF_checkUInt256ResultLen
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 32 // value_/23928
+load 13 // a/23919
+load 16 // value_/23912
+b+
+callsub l24_LF_checkUInt256ResultLen
+store 14 // z/23937
+load 16 // value_/23912
+load 12 // y/23920
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // z/23937
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 32 // value_/23928
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 28 // protoFee/23921
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 29 // totFee/23922
+b/
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 30 // protoFeeOut/23946
+load 16 // value_/23912
+load 28 // protoFee/23921
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 29 // protoFeeIn/23948
+global ZeroAddress
+load 30 // protoFeeOut/23946
+concat
+load 29 // protoFeeIn/23948
+global ZeroAddress
+concat
+load 29 // protoFeeIn/23948
+load 12 // y/23920
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // z/23937
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 30 // protoFeeOut/23946
+b>
+select
+dup
+store 28 // poolToProto/23957
+extract 0 32
+store 31 // b/23959
+load 28 // poolToProto/23957
+extract 32 32
+store 30 // b/23960
+load 15 // protoInfo/23917
+extract 128 1
+btoi
+!
+assert
+// ^ Claim: locked
+// at reach standard library:57:5:application
+// at ./index.rsh:894:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1040:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+load 14 // z/23937
+load 31 // b/23959
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 29 // A/23987
+load 12 // y/23920
+load 32 // value_/23928
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 30 // b/23960
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 28 // B/23990
+load 20 // s/15024
+extract 129 64
+store 14 // b1/23992
+load 11 // data_id/23045
+extract 33 32
+load 32 // value_/23928
+b<=
+assert
+// ^ Claim: slippage
+// at reach standard library:57:5:application
+// at ./index.rsh:909:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1040:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+load 29 // A/23987
+load 28 // B/23990
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 13 // a/23919
+load 12 // y/23920
+b*
+callsub l24_LF_checkUInt256ResultLen
+b>=
+assert
+// ^ Claim: constant product
+// at reach standard library:57:5:application
+// at ./index.rsh:918:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1040:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+global ZeroAddress
+load 32 // value_/23928
+concat
+store 13 // v24016
+load 29 // A/23987
+load 28 // B/23990
+concat
+store 12 // v24017
+load 14 // b1/23992
+extract 0 32
+load 31 // b/23959
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 14 // b1/23992
+extract 32 32
+load 30 // b/23960
+b+
+callsub l24_LF_checkUInt256ResultLen
+concat
+store 28 // v24018
+load 11 // data_id/23045
+extract 0 1
+btoi
+bz l49_ifF
+byte base64(AAAAAAAAXdA=)
+load 13 // v24016
+concat
+log // up to 72 bytes
+load 13 // v24016
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_Trader_swapBForA3:
+// CompanionLabel True "_api_Trader_swapBForA3"
+callsub l42_LF_companionCall
+callsub l42_LF_companionCall
+// cost credit: 3
+// cost credit: 3
+load 11 // data_id/24461
+extract 1 32
+store 16 // value_/25535
+load 20 // s/15024
+extract 193 129
+store 15 // protoInfo/25540
+load 14 // poolBals/15143
+extract 32 32
+store 13 // a/25542
+load 14 // poolBals/15143
+extract 0 32
+store 12 // y/25543
+load 15 // protoInfo/25540
+extract 0 32
+store 28 // protoFee/25544
+load 15 // protoInfo/25540
+extract 64 32
+store 29 // totFee/25545
+load 16 // value_/25535
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+load 29 // totFee/25545
+b-
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+dup
+store 14 // amtInFee_b/25547
+load 12 // y/25543
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 13 // a/25542
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // amtInFee_b/25547
+b+
+callsub l24_LF_checkUInt256ResultLen
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 32 // value_/25551
+load 13 // a/25542
+load 16 // value_/25535
+b+
+callsub l24_LF_checkUInt256ResultLen
+store 14 // z/25560
+load 16 // value_/25535
+load 12 // y/25543
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // z/25560
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 32 // value_/25551
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 28 // protoFee/25544
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 29 // totFee/25545
+b/
+callsub l24_LF_checkUInt256ResultLen
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 30 // protoFeeOut/25569
+load 16 // value_/25535
+load 28 // protoFee/25544
+b*
+callsub l24_LF_checkUInt256ResultLen
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJxA=)
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 29 // protoFeeIn/25571
+global ZeroAddress
+load 30 // protoFeeOut/25569
+concat
+load 29 // protoFeeIn/25571
+global ZeroAddress
+concat
+load 29 // protoFeeIn/25571
+load 12 // y/25543
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // z/25560
+b/
+callsub l24_LF_checkUInt256ResultLen
+load 30 // protoFeeOut/25569
+b>
+select
+dup
+store 28 // poolToProto/25580
+extract 0 32
+store 31 // b/25582
+load 28 // poolToProto/25580
+extract 32 32
+store 30 // b/25583
+load 15 // protoInfo/25540
+extract 128 1
+btoi
+!
+assert
+// ^ Claim: locked
+// at reach standard library:57:5:application
+// at ./index.rsh:894:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1055:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+load 12 // y/25543
+load 32 // value_/25551
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 30 // b/25583
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 29 // A/25610
+load 14 // z/25560
+load 31 // b/25582
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 28 // B/25613
+load 20 // s/15024
+extract 129 64
+store 14 // b1/25615
+load 11 // data_id/24461
+extract 33 32
+load 32 // value_/25551
+b<=
+assert
+// ^ Claim: slippage
+// at reach standard library:57:5:application
+// at ./index.rsh:909:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1055:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+load 29 // A/25610
+load 28 // B/25613
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 12 // y/25543
+load 13 // a/25542
+b*
+callsub l24_LF_checkUInt256ResultLen
+b>=
+assert
+// ^ Claim: constant product
+// at reach standard library:57:5:application
+// at ./index.rsh:918:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:947:51:application call to "calcSwap" (defined at: ./index.rsh:893:73:function exp)
+// at ./index.rsh:981:62:application call to "viewSwap" (defined at: ./index.rsh:938:67:function exp)
+// at ./index.rsh:1055:25:application call to "doSwap" (defined at: ./index.rsh:980:11:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+load 32 // value_/25551
+global ZeroAddress
+concat
+store 13 // v25640
+load 29 // A/25610
+load 28 // B/25613
+concat
+store 12 // v25641
+load 14 // b1/25615
+extract 0 32
+load 30 // b/25583
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 14 // b1/25615
+extract 32 32
+load 31 // b/25582
+b+
+callsub l24_LF_checkUInt256ResultLen
+concat
+store 28 // v25642
+load 11 // data_id/24461
+extract 0 1
+btoi
+bz l50_ifF
+byte base64(AAAAAAAAZCg=)
+load 13 // v25640
+concat
+log // up to 72 bytes
+load 13 // v25640
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_arc200_approve3:
+// CompanionLabel True "_api_arc200_approve3"
+load 11 // data_id/25877
+extract 0 32
+store 13 // spender_/27158
+load 11 // data_id/25877
+extract 32 32
+store 12 // value_/27159
+txn Sender
+load 25 // zeroAddress/14973
+!=
+assert
+// ^ Claim: ARC200: Approve this to zero address
+// at reach standard library:57:5:application
+// at ./index.rsh:591:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:660:20:application call to "chkApprove_" (defined at: ./index.rsh:590:56:function exp)
+// at ./index.rsh:662:15:application call to [unknown function] (defined at: ./index.rsh:662:15:function exp)
+load 13 // spender_/27158
+load 25 // zeroAddress/14973
+!=
+assert
+// ^ Claim: ARC200: Approve to zero address
+// at reach standard library:57:5:application
+// at ./index.rsh:592:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:660:20:application call to "chkApprove_" (defined at: ./index.rsh:590:56:function exp)
+// at ./index.rsh:662:15:application call to [unknown function] (defined at: ./index.rsh:662:15:function exp)
+// resource: R_Box
+int 28100
+byte base64(AAAAAAAAAAE=)
+txn Sender
+load 13 // spender_/27158
+concat
+concat
+sha256
+load 12 // value_/27159
+callsub l25_LF_mapSet
+byte base64(GWn4ZQ==)
+txn Sender
+concat
+load 13 // spender_/27158
+concat
+load 12 // value_/27159
+concat
+log // up to 100 bytes
+// ^ log: "arc200_Approval" [spender_/15961,spender_/27158,value_/27159] "arc200_Approval(address,address,uint256)"
+int 1
+store 11 // v27171
+byte base64(AAAAAAAAaiM=)
+load 11 // v27171
+itob
+substring 7 8
+concat
+log // up to 9 bytes
+load 11 // v27171
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_arc200_transfer3:
+// CompanionLabel True "_api_arc200_transfer3"
+load 11 // data_id/27293
+extract 0 32
+store 13 // to_/28597
+load 11 // data_id/27293
+extract 32 32
+store 12 // value_/28598
+txn Sender
+load 13 // to_/28597
+!=
+assert
+// ^ Claim: ARC200: Transfer to self
+// at reach standard library:57:5:application
+// at ./index.rsh:584:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:625:20:application call to "chkTransfer" (defined at: ./index.rsh:583:50:function exp)
+// at ./index.rsh:627:15:application call to [unknown function] (defined at: ./index.rsh:627:15:function exp)
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+txn Sender
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+dup
+store 14 // v28604
+load 12 // value_/28598
+b>=
+assert
+// ^ Claim: ARC200: Transfer amount must not be greater than balance
+// at reach standard library:57:5:application
+// at ./index.rsh:585:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:625:20:application call to "chkTransfer" (defined at: ./index.rsh:583:50:function exp)
+// at ./index.rsh:627:15:application call to [unknown function] (defined at: ./index.rsh:627:15:function exp)
+int 1
+store 11 // v28609
+byte base64(AAAAAAAAb8E=)
+load 11 // v28609
+itob
+substring 7 8
+concat
+log // up to 9 bytes
+load 11 // v28609
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+int 28500
+byte base64(AA==)
+txn Sender
+concat
+load 14 // v28604
+load 12 // value_/28598
+b-
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+// resource: R_Box
+int 28500
+byte base64(AA==)
+load 13 // to_/28597
+concat
+global ZeroAddress
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 13 // to_/28597
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+load 12 // value_/28598
+b+
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+byte base64(eYPDXA==)
+txn Sender
+concat
+load 13 // to_/28597
+concat
+load 12 // value_/28598
+concat
+log // up to 100 bytes
+// ^ log: "arc200_Transfer" [spender_/15961,to_/28597,value_/28598] "arc200_Transfer(address,address,uint256)"
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_arc200_transferFrom3:
+// CompanionLabel True "_api_arc200_transferFrom3"
+load 11 // data_id/28709
+extract 0 32
+store 14 // from_/30044
+load 11 // data_id/28709
+extract 32 32
+store 13 // to_/30045
+load 11 // data_id/28709
+extract 64 32
+store 12 // value_/30046
+load 14 // from_/30044
+load 13 // to_/30045
+!=
+assert
+// ^ Claim: ARC200: Transfer to self
+// at reach standard library:57:5:application
+// at ./index.rsh:599:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:643:24:application call to "chkTransferFrom" (defined at: ./index.rsh:598:64:function exp)
+// at ./index.rsh:645:15:application call to [unknown function] (defined at: ./index.rsh:645:15:function exp)
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 14 // from_/30044
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+dup
+store 16 // v30052
+load 12 // value_/30046
+b>=
+assert
+// ^ Claim: ARC200: Amount must not be greater than balance
+// at reach standard library:57:5:application
+// at ./index.rsh:600:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:643:24:application call to "chkTransferFrom" (defined at: ./index.rsh:598:64:function exp)
+// at ./index.rsh:645:15:application call to [unknown function] (defined at: ./index.rsh:645:15:function exp)
+load 14 // from_/30044
+txn Sender
+concat
+store 15 // v30055
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AAAAAAAAAAE=)
+load 15 // v30055
+concat
+sha256
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+dup
+store 11 // v30057
+load 12 // value_/30046
+b>=
+assert
+// ^ Claim: ARC200: Amount must not be greater than allowance
+// at reach standard library:57:5:application
+// at ./index.rsh:604:16:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:643:24:application call to "chkTransferFrom" (defined at: ./index.rsh:598:64:function exp)
+// at ./index.rsh:645:15:application call to [unknown function] (defined at: ./index.rsh:645:15:function exp)
+int 28500
+byte base64(AA==)
+load 14 // from_/30044
+concat
+load 16 // v30052
+load 12 // value_/30046
+b-
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+// resource: R_Box
+int 28500
+byte base64(AA==)
+load 13 // to_/30045
+concat
+global ZeroAddress
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 13 // to_/30045
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+load 12 // value_/30046
+b+
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+byte base64(eYPDXA==)
+load 14 // from_/30044
+concat
+load 13 // to_/30045
+concat
+load 12 // value_/30046
+concat
+log // up to 100 bytes
+// ^ log: "arc200_Transfer" [from_/30044,to_/30045,value_/30046] "arc200_Transfer(address,address,uint256)"
+load 11 // v30057
+load 12 // value_/30046
+b-
+callsub l24_LF_checkUInt256ResultLen
+store 13 // allowance__/30075
+int 28100
+byte base64(AAAAAAAAAAE=)
+load 15 // v30055
+concat
+sha256
+load 13 // allowance__/30075
+callsub l25_LF_mapSet
+byte base64(GWn4ZQ==)
+load 14 // from_/30044
+concat
+txn Sender
+concat
+load 13 // allowance__/30075
+concat
+log // up to 100 bytes
+// ^ log: "arc200_Approval" [from_/30044,spender_/15961,allowance__/30075] "arc200_Approval(address,address,uint256)"
+int 1
+store 11 // v30078
+byte base64(AAAAAAAAdX4=)
+load 11 // v30078
+itob
+substring 7 8
+concat
+log // up to 9 bytes
+load 11 // v30078
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_createAllowanceBox3:
+// CompanionLabel True "_api_createAllowanceBox3"
+load 11 // data_id/30125
+extract 0 32
+load 11 // data_id/30125
+extract 32 32
+concat
+store 12 // v31507
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AAAAAAAAAAE=)
+load 12 // v31507
+concat
+sha256
+callsub l6_LF_mapRef
+int 0
+getbyte
+int 1
+!=
+assert
+// ^ Claim: ARC200: Allowance box already exists
+// at reach standard library:57:5:application
+// at ./index.rsh:693:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:698:15:application call to [unknown function] (defined at: ./index.rsh:698:15:function exp)
+int 28100
+byte base64(AAAAAAAAAAE=)
+load 12 // v31507
+concat
+sha256
+global ZeroAddress
+callsub l25_LF_mapSet
+byte base64()
+store 11 // v31516
+byte base64(AAAAAAAAexw=)
+load 11 // v31516
+concat
+log // up to 8 bytes
+load 11 // v31516
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_api_createBalanceBox3:
+// CompanionLabel True "_api_createBalanceBox3"
+load 13 // .fork9425.msg/15962
+extract 1 32
+store 11 // addr/32942
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 11 // addr/32942
+concat
+callsub l6_LF_mapRef
+int 0
+getbyte
+int 1
+!=
+assert
+// ^ Claim: ARC200: Balance box already exists
+// at reach standard library:57:5:application
+// at ./index.rsh:676:14:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:678:15:application call to [unknown function] (defined at: ./index.rsh:678:15:function exp)
+int 28500
+byte base64(AA==)
+load 11 // addr/32942
+concat
+global ZeroAddress
+callsub l25_LF_mapSet
+byte base64()
+store 11 // v32949
+byte base64(AAAAAAAAgLU=)
+load 11 // v32949
+concat
+log // up to 8 bytes
+load 11 // v32949
+store 4 // GV_apiRet :: Null
+global Round
+store 19 // thisConsensusTime/15025
+b _reachl_1
+_reacha_arc200_allowance:
+// CompanionLabel False "_reacha_arc200_allowance"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l5_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:428:23:property binding
+callsub l3_LF_svsLoad_2
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AAAAAAAAAAE=)
+load 12 // v63158
+load 11 // v63159
+concat
+concat
+sha256
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+_reacha_arc200_approve:
+// CompanionLabel False "_reacha_arc200_approve"
+int 8
+bzero
+byte base64(Bw==)
+load 12 // v63271
+load 11 // v63272
+concat
+concat
+int 97
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+_reacha_arc200_balanceOf:
+// CompanionLabel False "_reacha_arc200_balanceOf"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l8_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:427:23:property binding
+callsub l3_LF_svsLoad_2
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 11 // v63166
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+_reacha_arc200_decimals:
+// CompanionLabel False "_reacha_arc200_decimals"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l9_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:425:22:property binding
+callsub l3_LF_svsLoad_2
+byte base64(AAAAAAAAAAY=)
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+_reacha_arc200_name:
+// CompanionLabel False "_reacha_arc200_name"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l10_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:423:18:property binding
+callsub l3_LF_svsLoad_2
+load 24 // meta/14978
+extract 0 32
+dup
+store 11 // v15012
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+_reacha_arc200_symbol:
+// CompanionLabel False "_reacha_arc200_symbol"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l11_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:424:20:property binding
+callsub l3_LF_svsLoad_2
+load 24 // meta/14978
+extract 32 8
+dup
+store 11 // v15013
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+_reacha_arc200_totalSupply:
+// CompanionLabel False "_reacha_arc200_totalSupply"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l12_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:426:25:property binding
+callsub l3_LF_svsLoad_2
+byte base64(//////////////////////////////////////////8=)
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+_reacha_arc200_transfer:
+// CompanionLabel False "_reacha_arc200_transfer"
+int 8
+bzero
+byte base64(CA==)
+load 12 // v63279
+load 11 // v63280
+concat
+concat
+int 97
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+_reacha_arc200_transferFrom:
+// CompanionLabel False "_reacha_arc200_transferFrom"
+int 8
+bzero
+byte base64(CQ==)
+load 13 // v63287
+load 12 // v63288
+concat
+load 11 // v63289
+concat
+concat
+int 65
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+_reacha_createAllowanceBox:
+// CompanionLabel False "_reacha_createAllowanceBox"
+int 8
+bzero
+byte base64(Cg==)
+load 12 // v63297
+load 11 // v63298
+concat
+concat
+int 97
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+_reacha_createBalanceBox:
+// CompanionLabel False "_reacha_createBalanceBox"
+int 8
+bzero
+byte base64(Cw==)
+load 11 // v63305
+concat
+int 129
+bzero
+concat
+concat
+store 11 // v63318
+b _reachi_3
+_reacha_hasBox:
+// CompanionLabel False "_reacha_hasBox"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l13_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:430:13:property binding
+callsub l3_LF_svsLoad_2
+load 11 // v63188
+dup
+store 12 // v32965
+int 0
+getbyte
+switch l15_Allowance l16_Balance
+b errl
+_reacha_supportsInterface:
+// CompanionLabel False "_reacha_supportsInterface"
+load 1 // GV_currentStep :: UInt
+int 4
+<
+bz l20_ifF
+load 1 // GV_currentStep :: UInt
+int 2
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:432:24:property binding
+callsub l3_LF_svsLoad_2
+byte base64(6EclLCsVK5HLJQDu0e/dFbqQYCDEZwR7r8UyxmjzLYA=)
+load 11 // v63194
+sha256
+==
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+_reachi_0:
+// CompanionLabel False "_reachi_0"
+load 11 // v63312
+int 0
+extract_uint64
+store 13 // v63311
+load 11 // v63312
+extract 8 96
+store 12 // p/14959
+byte base64(mWsM0w==)
+load 13 // v63311
+itob
+concat
+load 12 // p/14959
+concat
+log // up to 108 bytes
+// ^ log: "_reach_e0" [v63311,p/14959] "_reach_e0(uint64,((byte[32],byte[8]),(uint64,uint64,uint64),address))"
+load 13 // v63311
+callsub l21_LF_timeCheck
+load 12 // p/14959
+extract 40 24
+dup
+store 11 // v14964
+int 8
+extract_uint64
+store 27 // v14965
+load 11 // v14964
+int 16
+extract_uint64
+store 26 // v14967
+load 27 // v14965
+itob
+sha256
+load 26 // v14967
+itob
+sha256
+!=
+assert
+// ^ Claim
+// at reach standard library:57:5:application
+// at ./index.rsh:446:12:application call to "check" (defined at: reach standard library:49:32:function exp)
+// at ./index.rsh:459:17:application call to "checkInput" (defined at: ./index.rsh:444:28:function exp)
+load 12 // p/14959
+extract 64 32
+store 25 // zeroAddress/14973
+load 12 // p/14959
+extract 0 40
+store 24 // meta/14978
+byte base64()
+store 23 // v14982
+byte base64(YXBwSUQ=)
+load 11 // v14964
+extract 0 8
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 11 // v14964
+int 0
+extract_uint64
+// resource: R_App
+itxn_field ApplicationID
+byte base64(88VKLQ==)
+itxn_field ApplicationArgs
+txn ApplicationID
+itob
+itxn_field ApplicationArgs
+load 27 // v14965
+itob
+itxn_field ApplicationArgs
+load 26 // v14967
+itob
+itxn_field ApplicationArgs
+itxn_submit
+// ^ Remote: register(uint64,uint64,uint64)(uint256,uint256,uint256,address,byte)
+// at ./index.rsh:470:71:application
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 12 // v14983
+byte base64(AAAAAAAAOoc=)
+load 12 // v14983
+concat
+log // up to 145 bytes
+load 12 // v14983
+dup
+store 11 // v14984
+int 0
+extract_uint64
+store 15 // v14986
+load 11 // v14984
+extract 8 129
+dup
+store 14 // v14987
+extract 0 32
+store 13 // protoFee/14988
+load 14 // v14987
+extract 32 32
+store 12 // lpFee/14989
+load 14 // v14987
+extract 64 32
+store 11 // totFee/14990
+load 13 // protoFee/14988
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+load 12 // lpFee/14989
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+bz l22_localIfF
+load 11 // totFee/14990
+load 12 // lpFee/14989
+load 13 // protoFee/14988
+b+
+callsub l24_LF_checkUInt256ResultLen
+b==
+store 16 // v14994
+l23_localIfK:
+load 16 // v14994
+load 11 // totFee/14990
+byte base64(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ=)
+b<
+&&
+load 11 // totFee/14990
+global ZeroAddress
+b>
+&&
+assert
+// ^ Claim
+// at ./index.rsh:470:71:application
+int 0
+load 15 // v14986
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:470:71:application
+global CurrentApplicationAddress
+store 22 // v15006
+// resource: R_Box
+int 28500
+byte base64(AA==)
+load 22 // v15006
+concat
+byte base64(//////////////////////////////////////////8=)
+callsub l25_LF_mapSet
+// resource: R_Box
+int 28500
+byte base64(AA==)
+load 25 // zeroAddress/14973
+concat
+global ZeroAddress
+callsub l25_LF_mapSet
+byte base64(//////////////////////////////////////////8=)
+store 16 // v15008
+byte base64(eYPDXA==)
+load 25 // zeroAddress/14973
+concat
+load 22 // v15006
+concat
+load 16 // v15008
+concat
+log // up to 100 bytes
+// ^ log: "arc200_Transfer" [zeroAddress/14973,v15006,v15008] "arc200_Transfer(address,address,uint256)"
+int 64
+bzero
+store 21 // v15020
+byte base64(AP//////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=)
+load 21 // v15020
+concat
+load 21 // v15020
+concat
+load 13 // protoFee/14988
+load 12 // lpFee/14989
+concat
+load 11 // totFee/14990
+concat
+load 14 // v14987
+extract 96 32
+concat
+load 14 // v14987
+extract 128 1
+concat
+concat
+global Round
+load 15 // v14986
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+b _reachl_1
+_reachp_0:
+callsub l0_LF_wasntMeth
+int 200000
+callsub l1_LF_mbrAdd
+// CompanionCreate
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+// resource: R_App
+byte base64(CDEAMgkS)
+itxn_field ApprovalProgram
+byte base64(CA==)
+itxn_field ClearStateProgram
+itxn_submit
+// cost credit: 3
+itxn CreatedApplicationID
+store 5 // GV_companion :: Contract
+// CompanionLabel False "_reachp_0"
+txna ApplicationArgs 1
+store 11 // v63312
+b _reachi_0
+_reachp_2:
+callsub l0_LF_wasntMeth
+// CompanionLabel False "_reachp_2"
+txna ApplicationArgs 1
+store 11 // v63315
+b _reachi_2
+_reachp_3:
+callsub l0_LF_wasntMeth
+// CompanionLabel False "_reachp_3"
+txna ApplicationArgs 1
+store 11 // v63318
+b _reachi_3
+alloc:
+int 0
+txn GlobalNumUint
+==
+assert
+int 7
+txn GlobalNumByteSlice
+==
+assert
+int 0
+txn LocalNumUint
+==
+assert
+int 0
+txn LocalNumByteSlice
+==
+assert
+int 0
+store 5 // GV_companion :: Contract
+callsub l0_LF_wasntMeth
+int 706
+bzero
+int 0
+int 0
+b updateStateNoOp
+arc200_allowanceAcq4c8hE24gt_EoooVBPqZqn0ii698pjkLnoeezacoY_:
+// CompanionLabel False "arc200_allowanceAcq4c8hE24gt_EoooVBPqZqn0ii698pjkLnoeezacoY_"
+txna ApplicationArgs 1
+txna ApplicationArgs 2
+store 11 // v63159
+store 12 // v63158
+b _reacha_arc200_allowance
+arc200_approve_aB7vxbW4PSDQsylrpf8z0pJ5DG0KY_ArfOZuMRX9a63o_:
+// CompanionLabel False "arc200_approve_aB7vxbW4PSDQsylrpf8z0pJ5DG0KY_ArfOZuMRX9a63o_"
+txna ApplicationArgs 1
+txna ApplicationArgs 2
+store 11 // v63272
+store 12 // v63271
+b _reacha_arc200_approve
+arc200_balanceOfAuLlni3r2JwN05I0cJndHjbQh_B7u8HtXeT2u87KRQA_:
+// CompanionLabel False "arc200_balanceOfAuLlni3r2JwN05I0cJndHjbQh_B7u8HtXeT2u87KRQA_"
+txna ApplicationArgs 1
+store 11 // v63166
+b _reacha_arc200_balanceOf
+arc200_decimals_0i3zaAdWGk8HTrh900e3z__BopVJHiDErU4VQKq4WR4_:
+// CompanionLabel False "arc200_decimals_0i3zaAdWGk8HTrh900e3z__BopVJHiDErU4VQKq4WR4_"
+b _reacha_arc200_decimals
+arc200_name__bytiUdKDeBB_7Wod3lAotr0fjTghvzrL3y_c3feTU4zUwo_:
+// CompanionLabel False "arc200_name__bytiUdKDeBB_7Wod3lAotr0fjTghvzrL3y_c3feTU4zUwo_"
+b _reacha_arc200_name
+arc200_symbol__bRs3rJdpYyd5U9jg4y_u6hZgTc3UoO_SmNhgJJ2m0lrY_:
+// CompanionLabel False "arc200_symbol__bRs3rJdpYyd5U9jg4y_u6hZgTc3UoO_SmNhgJJ2m0lrY_"
+b _reacha_arc200_symbol
+arc200_totalSupp2vgBT0Wqe9Jv1e5PQOIiaRDt7ILIY6S8h4wVn48Sh2s_:
+// CompanionLabel False "arc200_totalSupp2vgBT0Wqe9Jv1e5PQOIiaRDt7ILIY6S8h4wVn48Sh2s_"
+b _reacha_arc200_totalSupply
+arc200_transferF8dq513jzwlGNyuNOIzPPYDtVSgiLxnp3MTKwA15nTo4_:
+// CompanionLabel False "arc200_transferF8dq513jzwlGNyuNOIzPPYDtVSgiLxnp3MTKwA15nTo4_"
+txna ApplicationArgs 1
+txna ApplicationArgs 2
+txna ApplicationArgs 3
+store 11 // v63289
+store 12 // v63288
+store 13 // v63287
+b _reacha_arc200_transferFrom
+arc200_transfer_mW6YBiBj2tVEDo94HJlsKqWJTJtaEhfhx1b4rELoCvQ_:
+// CompanionLabel False "arc200_transfer_mW6YBiBj2tVEDo94HJlsKqWJTJtaEhfhx1b4rELoCvQ_"
+txna ApplicationArgs 1
+txna ApplicationArgs 2
+store 11 // v63280
+store 12 // v63279
+b _reacha_arc200_transfer
+createAllowanceB2ROxfIcz_6R_ep0_0Zc22AicK3l09Apm43_rPuKslYA_:
+// CompanionLabel False "createAllowanceB2ROxfIcz_6R_ep0_0Zc22AicK3l09Apm43_rPuKslYA_"
+txna ApplicationArgs 1
+txna ApplicationArgs 2
+store 11 // v63298
+store 12 // v63297
+b _reacha_createAllowanceBox
+createBalanceBox6WjVaipFnU7QzuD86P3ftF8jYdZZhB6hQJa4ey35iD0_:
+// CompanionLabel False "createBalanceBox6WjVaipFnU7QzuD86P3ftF8jYdZZhB6hQJa4ey35iD0_"
+txna ApplicationArgs 1
+store 11 // v63305
+b _reacha_createBalanceBox
+hasBox__byte_bytMsf4xzxj5kyULYB6GEX3TQ_tTiyGJkl0YbtlZ_3neR8_:
+// CompanionLabel False "hasBox__byte_bytMsf4xzxj5kyULYB6GEX3TQ_tTiyGJkl0YbtlZ_3neR8_"
+txna ApplicationArgs 1
+store 11 // v63188
+b _reacha_hasBox
+l10_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:423:18:property binding
+callsub l4_LF_svsLoad_4
+load 24 // meta/14978
+extract 0 32
+dup
+store 11 // v15012
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l11_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:424:20:property binding
+callsub l4_LF_svsLoad_4
+load 24 // meta/14978
+extract 32 8
+dup
+store 11 // v15013
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l12_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:426:25:property binding
+callsub l4_LF_svsLoad_4
+byte base64(//////////////////////////////////////////8=)
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l13_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:430:13:property binding
+callsub l4_LF_svsLoad_4
+load 11 // v63188
+dup
+store 12 // v15112
+int 0
+getbyte
+switch l18_Allowance l19_Balance
+b errl
+l14_LocalSwitchK:
+load 11 // v32970
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l15_Allowance:
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AAAAAAAAAAE=)
+load 12 // v32965
+extract 1 64
+concat
+sha256
+callsub l6_LF_mapRef
+int 0
+getbyte
+int 1
+==
+store 11 // v32970
+b l14_LocalSwitchK
+l16_Balance:
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 12 // v32965
+extract 1 32
+concat
+callsub l6_LF_mapRef
+int 0
+getbyte
+int 1
+==
+store 11 // v32970
+b l14_LocalSwitchK
+l17_LocalSwitchK:
+load 11 // v15117
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l18_Allowance:
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AAAAAAAAAAE=)
+load 12 // v15112
+extract 1 64
+concat
+sha256
+callsub l6_LF_mapRef
+int 0
+getbyte
+int 1
+==
+store 11 // v15117
+b l17_LocalSwitchK
+l19_Balance:
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 12 // v15112
+extract 1 32
+concat
+callsub l6_LF_mapRef
+int 0
+getbyte
+int 1
+==
+store 11 // v15117
+b l17_LocalSwitchK
+l20_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:432:24:property binding
+callsub l4_LF_svsLoad_4
+byte base64(6EclLCsVK5HLJQDu0e/dFbqQYCDEZwR7r8UyxmjzLYA=)
+load 11 // v63194
+sha256
+==
+itob
+substring 7 8
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l22_localIfF:
+int 0
+store 16 // v14994
+b l23_localIfK
+l26_Protocol_harvest0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 161
+store 11 // data_id/15965
+b _api_Protocol_harvest3
+l27_Provider_deposit0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 97
+store 11 // data_id/17381
+b _api_Provider_deposit3
+l28_Provider_withdraw0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 97
+store 11 // data_id/18797
+b _api_Provider_withdraw3
+l29_Trader_exactSwapAForB0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 65
+store 11 // data_id/20213
+b _api_Trader_exactSwapAForB3
+l2_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:429:11:property binding
+callsub l4_LF_svsLoad_4
+load 20 // s/15024
+extract 1 64
+load 20 // s/15024
+extract 65 64
+concat
+load 20 // s/15024
+extract 193 129
+concat
+load 20 // s/15024
+extract 129 64
+concat
+load 26 // v14967
+itob
+concat
+load 27 // v14965
+itob
+concat
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l30_Trader_exactSwapBForA0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 65
+store 11 // data_id/21629
+b _api_Trader_exactSwapBForA3
+l31_Trader_swapAForB0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 65
+store 11 // data_id/23045
+b _api_Trader_swapAForB3
+l32_Trader_swapBForA0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 65
+store 11 // data_id/24461
+b _api_Trader_swapBForA3
+l33_arc200_approve0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 64
+store 11 // data_id/25877
+b _api_arc200_approve3
+l34_arc200_transfer0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 64
+store 11 // data_id/27293
+b _api_arc200_transfer3
+l35_arc200_transferFrom0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 96
+store 11 // data_id/28709
+b _api_arc200_transferFrom3
+l36_createAllowanceBox0_9425:
+load 13 // .fork9425.msg/15962
+extract 1 64
+store 11 // data_id/30125
+b _api_createAllowanceBox3
+l37_createBalanceBox0_9425:
+b _api_createBalanceBox3
+l38_localIfF:
+int 0
+store 11 // v15995
+b l39_localIfK
+l43_localIfF:
+load 17 // x/17520
+load 15 // z/15140
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // poolBals/15143
+extract 0 32
+b/
+callsub l24_LF_checkUInt256ResultLen
+store 30 // a/17534
+load 13 // x/17521
+load 15 // z/15140
+b*
+callsub l24_LF_checkUInt256ResultLen
+load 14 // poolBals/15143
+extract 32 32
+b/
+callsub l24_LF_checkUInt256ResultLen
+dup
+store 12 // b/17539
+load 30 // a/17534
+dup
+load 12 // b/17539
+b<
+select
+store 28 // b/17519
+b l44_localIfK
+l45_ifF:
+txn Sender
+load 22 // v15006
+concat
+store 32 // v17589
+byte base64(SpaPjw==)
+store 30 // v17594
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+// resource: R_App
+itxn_field ApplicationID
+load 30 // v17594
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 22 // v15006
+// resource: R_Account
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 17 // x/17520
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transferFrom(byte[4],address,address,uint256)byte
+// at ./index.rsh:742:15:application
+// at ./index.rsh:816:39:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 31 // v17595
+byte base64(AAAAAAAARLs=)
+load 31 // v17595
+concat
+log // up to 17 bytes
+load 31 // v17595
+dup
+store 11 // v17596
+int 0
+extract_uint64
+store 31 // v17598
+int 0
+load 31 // v17598
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:742:15:application
+// at ./index.rsh:816:39:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+// resource: R_App
+itxn_field ApplicationID
+load 30 // v17594
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 22 // v15006
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 13 // x/17521
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transferFrom(byte[4],address,address,uint256)byte
+// at ./index.rsh:742:15:application
+// at ./index.rsh:817:39:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 11 // v17615
+byte base64(AAAAAAAARM8=)
+load 11 // v17615
+concat
+log // up to 17 bytes
+load 11 // v17615
+dup
+store 30 // v17616
+int 0
+extract_uint64
+store 11 // v17618
+int 0
+load 11 // v17618
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:742:15:application
+// at ./index.rsh:817:39:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:809:15:application call to [unknown function] (defined at: ./index.rsh:809:15:function exp)
+int 28500
+byte base64(AA==)
+load 22 // v15006
+concat
+load 12 // v17550
+load 28 // b/17519
+b-
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+// resource: R_Box
+int 28500
+byte base64(AA==)
+txn Sender
+concat
+global ZeroAddress
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+txn Sender
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+load 28 // b/17519
+b+
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+byte base64(eYPDXA==)
+load 22 // v15006
+concat
+txn Sender
+concat
+load 28 // b/17519
+concat
+log // up to 100 bytes
+// ^ log: "arc200_Transfer" [v15006,spender_/15961,b/17519] "arc200_Transfer(address,address,uint256)"
+byte base64(AAAAAAAARG8=)
+load 28 // b/17519
+concat
+log // up to 40 bytes
+load 28 // b/17519
+store 4 // GV_apiRet :: Null
+load 17 // x/17520
+load 13 // x/17521
+concat
+store 30 // v17647
+load 14 // poolBals/15143
+extract 0 32
+load 17 // x/17520
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 14 // poolBals/15143
+extract 32 32
+load 13 // x/17521
+b+
+callsub l24_LF_checkUInt256ResultLen
+concat
+store 12 // v17648
+byte base64(GSp3bA==)
+txn Sender
+concat
+load 30 // v17647
+concat
+load 28 // b/17519
+concat
+load 12 // v17648
+concat
+log // up to 196 bytes
+// ^ log: "DepositEvent" [spender_/15961,v17647,b/17519,v17648] "DepositEvent(address,(uint256,uint256),uint256,(uint256,uint256))"
+load 20 // s/15024
+extract 0 1
+load 16 // lpHeld/15139
+load 28 // b/17519
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 15 // z/15140
+load 28 // b/17519
+b+
+callsub l24_LF_checkUInt256ResultLen
+concat
+concat
+load 12 // v17648
+concat
+load 20 // s/15024
+extract 129 64
+concat
+load 29 // v17515
+concat
+global Round
+load 18 // netBalance/15028
+load 31 // v17598
++
+load 11 // v17618
++
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+b _reachl_1
+l46_ifF:
+int 28500
+byte base64(AA==)
+txn Sender
+concat
+load 17 // v19120
+load 28 // b/19092
+b-
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+// resource: R_Box
+int 28500
+byte base64(AA==)
+load 22 // v15006
+concat
+global ZeroAddress
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 22 // v15006
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+load 28 // b/19092
+b+
+callsub l24_LF_checkUInt256ResultLen
+callsub l25_LF_mapSet
+byte base64(eYPDXA==)
+txn Sender
+concat
+load 22 // v15006
+concat
+load 28 // b/19092
+concat
+log // up to 100 bytes
+// ^ log: "arc200_Transfer" [spender_/15961,v15006,b/19092] "arc200_Transfer(address,address,uint256)"
+byte base64(2nAluQ==)
+store 11 // v19158
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+// resource: R_App
+itxn_field ApplicationID
+load 11 // v19158
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 29 // b/19103
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:856:35:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 30 // v19159
+byte base64(AAAAAAAAStc=)
+load 30 // v19159
+concat
+log // up to 17 bytes
+load 30 // v19159
+dup
+store 17 // v19160
+int 0
+extract_uint64
+store 31 // v19162
+int 0
+load 31 // v19162
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:856:35:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+// resource: R_App
+itxn_field ApplicationID
+load 11 // v19158
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 14 // b/19108
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:857:35:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 17 // v19176
+byte base64(AAAAAAAASug=)
+load 17 // v19176
+concat
+log // up to 17 bytes
+load 17 // v19176
+dup
+store 11 // v19177
+int 0
+extract_uint64
+store 30 // v19179
+int 0
+load 30 // v19179
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:857:35:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:850:15:application call to [unknown function] (defined at: ./index.rsh:850:15:function exp)
+load 29 // b/19103
+load 14 // b/19108
+concat
+store 17 // v19186
+byte base64(AAAAAAAASvI=)
+load 17 // v19186
+concat
+log // up to 72 bytes
+load 17 // v19186
+store 4 // GV_apiRet :: Null
+load 13 // y/19097
+load 29 // b/19103
+b-
+callsub l24_LF_checkUInt256ResultLen
+load 12 // y/19098
+load 14 // b/19108
+b-
+callsub l24_LF_checkUInt256ResultLen
+concat
+store 11 // v19210
+byte base64(56Ph9Q==)
+txn Sender
+concat
+load 28 // b/19092
+concat
+load 17 // v19186
+concat
+load 11 // v19210
+concat
+log // up to 196 bytes
+// ^ log: "WithdrawEvent" [spender_/15961,b/19092,v19186,v19210] "WithdrawEvent(address,uint256,(uint256,uint256),(uint256,uint256))"
+load 20 // s/15024
+extract 0 1
+load 16 // lpHeld/15139
+load 28 // b/19092
+b+
+callsub l24_LF_checkUInt256ResultLen
+load 15 // z/15140
+load 28 // b/19092
+b-
+callsub l24_LF_checkUInt256ResultLen
+concat
+concat
+load 11 // v19210
+concat
+load 20 // s/15024
+extract 129 64
+concat
+load 20 // s/15024
+extract 193 129
+concat
+global Round
+load 18 // netBalance/15028
+load 31 // v19162
++
+load 30 // v19179
++
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+b _reachl_1
+l47_ifF:
+load 27 // v14965
+itob
+int 8
+bzero
+concat
+txn Sender
+concat
+store 32 // v20787
+load 27 // v14965
+itob
+int 8
+bzero
+concat
+load 22 // v15006
+concat
+store 31 // v20788
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+// resource: R_App
+itxn_field ApplicationID
+byte base64(SpaPjw==)
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 22 // v15006
+// resource: R_Account
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 28 // value_/20654
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transferFrom(byte[4],address,address,uint256)byte
+// at ./index.rsh:742:15:application
+// at ./index.rsh:994:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1068:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 14 // v20795
+byte base64(AAAAAAAAUTs=)
+load 14 // v20795
+concat
+log // up to 17 bytes
+load 14 // v20795
+dup
+store 11 // v20796
+int 0
+extract_uint64
+store 30 // v20798
+int 0
+load 30 // v20798
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:742:15:application
+// at ./index.rsh:994:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1068:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+byte base64(2nAluQ==)
+store 14 // v20811
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+// resource: R_App
+itxn_field ApplicationID
+load 14 // v20811
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 16 // value_/20655
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1001:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1068:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 11 // v20812
+byte base64(AAAAAAAAUUw=)
+load 11 // v20812
+concat
+log // up to 17 bytes
+load 11 // v20812
+dup
+store 16 // v20813
+int 0
+extract_uint64
+store 11 // v20815
+int 0
+load 11 // v20815
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1001:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1068:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+itxn_field ApplicationID
+load 14 // v20811
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 33 // value_/20673
+itxn_field ApplicationArgs
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1002:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1068:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 16 // v20829
+byte base64(AAAAAAAAUV0=)
+load 16 // v20829
+concat
+log // up to 17 bytes
+load 16 // v20829
+dup
+store 14 // v20830
+int 0
+extract_uint64
+store 16 // v20832
+int 0
+load 16 // v20832
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1002:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1068:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1068:21:application call to [unknown function] (defined at: ./index.rsh:1068:21:function exp)
+byte base64(AAAAAAAAURw=)
+load 13 // v20764
+concat
+log // up to 72 bytes
+load 13 // v20764
+store 4 // GV_apiRet :: Null
+load 28 // value_/20654
+global ZeroAddress
+concat
+store 14 // v20850
+byte base64(H268Tw==)
+txn Sender
+concat
+load 14 // v20850
+concat
+load 13 // v20764
+concat
+load 12 // v20765
+concat
+log // up to 228 bytes
+// ^ log: "SwapEvent" [spender_/15961,v20850,v20764,v20765] "SwapEvent(address,(uint256,uint256),(uint256,uint256),(uint256,uint256))"
+byte base64(kPNRjw==)
+load 29 // v20766
+concat
+log // up to 68 bytes
+// ^ log: "FeeEvent" [v20766] "FeeEvent((uint256,uint256))"
+load 20 // s/15024
+extract 0 1
+load 17 // lptBals/15138
+concat
+load 12 // v20765
+concat
+load 29 // v20766
+concat
+load 15 // protoInfo/20658
+concat
+global Round
+load 18 // netBalance/15028
+load 30 // v20798
++
+load 11 // v20815
++
+load 16 // v20832
++
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+b _reachl_1
+l48_ifF:
+load 26 // v14967
+itob
+int 8
+bzero
+concat
+txn Sender
+concat
+store 32 // v22416
+load 26 // v14967
+itob
+int 8
+bzero
+concat
+load 22 // v15006
+concat
+store 31 // v22417
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+// resource: R_App
+itxn_field ApplicationID
+byte base64(SpaPjw==)
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 22 // v15006
+// resource: R_Account
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 28 // value_/22283
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transferFrom(byte[4],address,address,uint256)byte
+// at ./index.rsh:742:15:application
+// at ./index.rsh:1004:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1080:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 14 // v22424
+byte base64(AAAAAAAAV5g=)
+load 14 // v22424
+concat
+log // up to 17 bytes
+load 14 // v22424
+dup
+store 11 // v22425
+int 0
+extract_uint64
+store 30 // v22427
+int 0
+load 30 // v22427
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:742:15:application
+// at ./index.rsh:1004:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1080:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+byte base64(2nAluQ==)
+store 14 // v22440
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+// resource: R_App
+itxn_field ApplicationID
+load 14 // v22440
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 16 // value_/22284
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1011:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1080:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 11 // v22441
+byte base64(AAAAAAAAV6k=)
+load 11 // v22441
+concat
+log // up to 17 bytes
+load 11 // v22441
+dup
+store 16 // v22442
+int 0
+extract_uint64
+store 11 // v22444
+int 0
+load 11 // v22444
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1011:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1080:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+itxn_field ApplicationID
+load 14 // v22440
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 33 // value_/22302
+itxn_field ApplicationArgs
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1012:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1080:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 16 // v22458
+byte base64(AAAAAAAAV7o=)
+load 16 // v22458
+concat
+log // up to 17 bytes
+load 16 // v22458
+dup
+store 14 // v22459
+int 0
+extract_uint64
+store 16 // v22461
+int 0
+load 16 // v22461
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1012:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1080:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1080:21:application call to [unknown function] (defined at: ./index.rsh:1080:21:function exp)
+byte base64(AAAAAAAAV3k=)
+load 13 // v22393
+concat
+log // up to 72 bytes
+load 13 // v22393
+store 4 // GV_apiRet :: Null
+global ZeroAddress
+load 28 // value_/22283
+concat
+store 14 // v22479
+byte base64(H268Tw==)
+txn Sender
+concat
+load 14 // v22479
+concat
+load 13 // v22393
+concat
+load 12 // v22394
+concat
+log // up to 228 bytes
+// ^ log: "SwapEvent" [spender_/15961,v22479,v22393,v22394] "SwapEvent(address,(uint256,uint256),(uint256,uint256),(uint256,uint256))"
+byte base64(kPNRjw==)
+load 29 // v22395
+concat
+log // up to 68 bytes
+// ^ log: "FeeEvent" [v22395] "FeeEvent((uint256,uint256))"
+load 20 // s/15024
+extract 0 1
+load 17 // lptBals/15138
+concat
+load 12 // v22394
+concat
+load 29 // v22395
+concat
+load 15 // protoInfo/22287
+concat
+global Round
+load 18 // netBalance/15028
+load 30 // v22427
++
+load 11 // v22444
++
+load 16 // v22461
++
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+b _reachl_1
+l49_ifF:
+load 27 // v14965
+itob
+int 8
+bzero
+concat
+txn Sender
+concat
+store 31 // v24039
+load 27 // v14965
+itob
+int 8
+bzero
+concat
+load 22 // v15006
+concat
+store 30 // v24040
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+// resource: R_App
+itxn_field ApplicationID
+byte base64(SpaPjw==)
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 22 // v15006
+// resource: R_Account
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 16 // value_/23912
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transferFrom(byte[4],address,address,uint256)byte
+// at ./index.rsh:742:15:application
+// at ./index.rsh:994:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1041:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 14 // v24047
+byte base64(AAAAAAAAXe8=)
+load 14 // v24047
+concat
+log // up to 17 bytes
+load 14 // v24047
+dup
+store 11 // v24048
+int 0
+extract_uint64
+store 29 // v24050
+int 0
+load 29 // v24050
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:742:15:application
+// at ./index.rsh:994:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1041:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+byte base64(2nAluQ==)
+store 14 // v24063
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+// resource: R_App
+itxn_field ApplicationID
+load 14 // v24063
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 32 // value_/23928
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1001:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1041:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 11 // v24064
+byte base64(AAAAAAAAXgA=)
+load 11 // v24064
+concat
+log // up to 17 bytes
+load 11 // v24064
+dup
+store 32 // v24065
+int 0
+extract_uint64
+store 11 // v24067
+int 0
+load 11 // v24067
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1001:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1041:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+itxn_field ApplicationID
+load 14 // v24063
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+global ZeroAddress
+itxn_field ApplicationArgs
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1002:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1041:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 32 // v24081
+byte base64(AAAAAAAAXhE=)
+load 32 // v24081
+concat
+log // up to 17 bytes
+load 32 // v24081
+dup
+store 14 // v24082
+int 0
+extract_uint64
+store 30 // v24084
+int 0
+load 30 // v24084
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1002:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1041:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1041:21:application call to [unknown function] (defined at: ./index.rsh:1041:21:function exp)
+byte base64(AAAAAAAAXdA=)
+load 13 // v24016
+concat
+log // up to 72 bytes
+load 13 // v24016
+store 4 // GV_apiRet :: Null
+load 16 // value_/23912
+global ZeroAddress
+concat
+store 14 // v24102
+byte base64(H268Tw==)
+txn Sender
+concat
+load 14 // v24102
+concat
+load 13 // v24016
+concat
+load 12 // v24017
+concat
+log // up to 228 bytes
+// ^ log: "SwapEvent" [spender_/15961,v24102,v24016,v24017] "SwapEvent(address,(uint256,uint256),(uint256,uint256),(uint256,uint256))"
+byte base64(kPNRjw==)
+load 28 // v24018
+concat
+log // up to 68 bytes
+// ^ log: "FeeEvent" [v24018] "FeeEvent((uint256,uint256))"
+load 20 // s/15024
+extract 0 1
+load 17 // lptBals/15138
+concat
+load 12 // v24017
+concat
+load 28 // v24018
+concat
+load 15 // protoInfo/23917
+concat
+global Round
+load 18 // netBalance/15028
+load 29 // v24050
++
+load 11 // v24067
++
+load 30 // v24084
++
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+b _reachl_1
+l50_ifF:
+load 26 // v14967
+itob
+int 8
+bzero
+concat
+txn Sender
+concat
+store 31 // v25663
+load 26 // v14967
+itob
+int 8
+bzero
+concat
+load 22 // v15006
+concat
+store 30 // v25664
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+// resource: R_App
+itxn_field ApplicationID
+byte base64(SpaPjw==)
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 22 // v15006
+// resource: R_Account
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 16 // value_/25535
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+// resource: R_Box
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transferFrom(byte[4],address,address,uint256)byte
+// at ./index.rsh:742:15:application
+// at ./index.rsh:1004:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1056:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 14 // v25671
+byte base64(AAAAAAAAZEc=)
+load 14 // v25671
+concat
+log // up to 17 bytes
+load 14 // v25671
+dup
+store 11 // v25672
+int 0
+extract_uint64
+store 29 // v25674
+int 0
+load 29 // v25674
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:742:15:application
+// at ./index.rsh:1004:41:application call to [unknown function] (defined at: ./index.rsh:725:56:function exp)
+// at ./index.rsh:1056:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+byte base64(2nAluQ==)
+store 14 // v25687
+byte base64(YXBwSUQ=)
+load 27 // v14965
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 27 // v14965
+// resource: R_App
+itxn_field ApplicationID
+load 14 // v25687
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+load 32 // value_/25551
+itxn_field ApplicationArgs
+// resource: R_Box
+// resource: R_Box
+load 27 // v14965
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1011:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1056:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 11 // v25688
+byte base64(AAAAAAAAZFg=)
+load 11 // v25688
+concat
+log // up to 17 bytes
+load 11 // v25688
+dup
+store 32 // v25689
+int 0
+extract_uint64
+store 11 // v25691
+int 0
+load 11 // v25691
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1011:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1056:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+byte base64(YXBwSUQ=)
+load 26 // v14967
+itob
+concat
+sha512_256
+store 8 // GV_remoteCallee :: Address
+global CurrentApplicationAddress
+min_balance
+store 9 // GV_remoteMinB :: Tuple()
+byte base64()
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+itob
+store 10 // GV_remoteBals :: Tuple()
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 26 // v14967
+itxn_field ApplicationID
+load 14 // v25687
+itxn_field ApplicationArgs
+txn Sender
+dup
+itxn_field Accounts
+itxn_field ApplicationArgs
+global ZeroAddress
+itxn_field ApplicationArgs
+load 26 // v14967
+itxn_field Applications
+itxn_submit
+// ^ Remote: arc200_transfer(byte[4],address,uint256)byte
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1012:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1056:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+global CurrentApplicationAddress
+balance
+load 9 // GV_remoteMinB :: Tuple()
+-
+load 10 // GV_remoteBals :: Tuple()
+btoi
+-
+itob
+gitxn 0 LastLog
+extract 4 0
+concat
+store 32 // v25705
+byte base64(AAAAAAAAZGk=)
+load 32 // v25705
+concat
+log // up to 17 bytes
+load 32 // v25705
+dup
+store 14 // v25706
+int 0
+extract_uint64
+store 30 // v25708
+int 0
+load 30 // v25708
+==
+assert
+// ^ Claim: remote bill check
+// at ./index.rsh:723:15:application
+// at ./index.rsh:1012:37:application call to [unknown function] (defined at: ./index.rsh:710:45:function exp)
+// at ./index.rsh:1056:25:application call to "c" (defined at: ./index.rsh:987:22:function exp)
+// at ./index.rsh:1056:21:application call to [unknown function] (defined at: ./index.rsh:1056:21:function exp)
+byte base64(AAAAAAAAZCg=)
+load 13 // v25640
+concat
+log // up to 72 bytes
+load 13 // v25640
+store 4 // GV_apiRet :: Null
+global ZeroAddress
+load 16 // value_/25535
+concat
+store 14 // v25726
+byte base64(H268Tw==)
+txn Sender
+concat
+load 14 // v25726
+concat
+load 13 // v25640
+concat
+load 12 // v25641
+concat
+log // up to 228 bytes
+// ^ log: "SwapEvent" [spender_/15961,v25726,v25640,v25641] "SwapEvent(address,(uint256,uint256),(uint256,uint256),(uint256,uint256))"
+byte base64(kPNRjw==)
+load 28 // v25642
+concat
+log // up to 68 bytes
+// ^ log: "FeeEvent" [v25642] "FeeEvent((uint256,uint256))"
+load 20 // s/15024
+extract 0 1
+load 17 // lptBals/15138
+concat
+load 12 // v25641
+concat
+load 28 // v25642
+concat
+load 15 // protoInfo/25540
+concat
+global Round
+load 18 // netBalance/15028
+load 29 // v25674
++
+load 11 // v25691
++
+load 30 // v25708
++
+store 18 // netBalance/15028
+store 19 // thisConsensusTime/15025
+store 20 // s/15024
+b _reachl_1
+l51_ifF:
+load 20 // s/15024
+extract 1 64
+dup
+store 17 // lptBals/15138
+extract 0 32
+store 16 // lpHeld/15139
+load 17 // lptBals/15138
+extract 32 32
+store 15 // z/15140
+load 20 // s/15024
+extract 65 64
+store 14 // poolBals/15143
+l53_LF_svsDump_4:
+load 27 // v14965
+itob
+load 26 // v14967
+itob
+concat
+load 25 // zeroAddress/14973
+concat
+load 24 // meta/14978
+concat
+load 23 // v14982
+concat
+load 22 // v15006
+concat
+load 21 // v15020
+concat
+load 20 // s/15024
+concat
+load 18 // netBalance/15028
+itob
+concat
+load 17 // lptBals/15138
+concat
+load 16 // lpHeld/15139
+concat
+load 15 // z/15140
+concat
+load 14 // poolBals/15143
+concat
+int 4
+global Round
+b updateStateNoOp
+l57_boxSet:
+pop
+swap
+box_put
+pop
+retsub
+l58_LF_makeTxnK_False_True:
+int 0
+itxn_field Fee
+int pay
+itxn_field TypeEnum
+itxn_field Receiver
+itxn_field Amount
+itxn_submit
+retsub
+l5_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:428:23:property binding
+callsub l4_LF_svsLoad_4
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AAAAAAAAAAE=)
+load 12 // v63158
+load 11 // v63159
+concat
+concat
+sha256
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l8_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:427:23:property binding
+callsub l4_LF_svsLoad_4
+global ZeroAddress
+// resource: R_Box
+byte base64()
+global ZeroAddress
+byte base64(AA==)
+load 11 // v63166
+concat
+callsub l6_LF_mapRef
+callsub l7_LF_fromSome
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+l9_ifF:
+load 1 // GV_currentStep :: UInt
+int 4
+==
+assert
+// ^ Claim: Incorrect state: not leaf
+// at ./index.rsh:425:22:property binding
+callsub l4_LF_svsLoad_4
+byte base64(AAAAAAAAAAY=)
+store 4 // GV_apiRet :: Null
+b apiReturn_check
+supportsInterfac_blIJMxxpZoFW0kYet05ih6kJ8AxwWfFqb_RXVfbNHw_:
+// CompanionLabel False "supportsInterfac_blIJMxxpZoFW0kYet05ih6kJ8AxwWfFqb_RXVfbNHw_"
+txna ApplicationArgs 1
+store 11 // v63194
+b _reacha_supportsInterface
+updateMbr_eq:
+pop
+retsub
+updateMbr_neg:
+swap
+-
+dup
+store 6 // GV_mbrAdd :: UInt
+global CreatorAddress
+callsub l41_LF_makeTxn_False_False_False_True
+retsub
+updateMbr_pos_eq:
+-
+dup
+bz updateMbr_eq
+dup
+store 6 // GV_mbrAdd :: UInt
+l59_LF_checkTxn_False:
+// resource: R_Txn
+txn GroupIndex
+load 0 // GV_txnCounter :: UInt
+int 1
++
+dup
+store 0 // GV_txnCounter :: UInt
+-
+dupn 2
+gtxns Receiver
+global CurrentApplicationAddress
+==
+assert
+gtxns TypeEnum
+int pay
+==
+assert
+gtxns Amount
+==
+assert
+retsub
+l24_LF_checkUInt256ResultLen:
+dup
+len
+int 32
+swap
+-
+bzero
+swap
+concat
+retsub
+l6_LF_mapRef:
+box_get
+dup
+itob
+substring 7 8
+bury 4
+select
+concat
+retsub
+l25_LF_mapSet:
+swap
+dup
+box_len
+bnz l57_boxSet
+dig 3
+callsub l1_LF_mbrAdd
+b l57_boxSet
+l7_LF_fromSome:
+dup
+extract 1 0
+swap
+int 0
+getbyte
+select
+retsub
+l4_LF_svsLoad_4:
+dup
+int 0
+extract_uint64
+store 27 // v14965
+dup
+int 8
+extract_uint64
+store 26 // v14967
+dup
+extract 16 32
+store 25 // zeroAddress/14973
+dup
+extract 48 40
+store 24 // meta/14978
+dup
+pop
+byte base64()
+store 23 // v14982
+dup
+extract 88 32
+store 22 // v15006
+dup
+extract 120 64
+store 21 // v15020
+dup
+int 184
+int 322
+extract3
+store 20 // s/15024
+dup
+int 506
+extract_uint64
+store 18 // netBalance/15028
+dup
+int 514
+int 64
+extract3
+store 17 // lptBals/15138
+dup
+int 578
+int 32
+extract3
+store 16 // lpHeld/15139
+dup
+int 610
+int 32
+extract3
+store 15 // z/15140
+int 642
+int 64
+extract3
+store 14 // poolBals/15143
+retsub
+l42_LF_companionCall:
+itxn_begin
+int 0
+itxn_field Fee
+int appl
+itxn_field TypeEnum
+load 5 // GV_companion :: Contract
+itxn_field ApplicationID
+itxn_submit
+retsub
+l3_LF_svsLoad_2:
+dup
+int 0
+extract_uint64
+store 27 // v14965
+dup
+int 8
+extract_uint64
+store 26 // v14967
+dup
+extract 16 40
+store 24 // meta/14978
+int 56
+int 322
+extract3
+store 20 // s/15024
+retsub
+l0_LF_wasntMeth:
+int 1
+store 3 // GV_wasntMeth :: Bool
+retsub
+l21_LF_timeCheck:
+dup
+int 0
+==
+swap
+load 2 // GV_currentTime :: UInt
+==
+||
+assert
+retsub
+l55_LF_updateMbr:
+load 6 // GV_mbrAdd :: UInt
+load 7 // GV_mbrSub :: UInt
+dup2
+>=
+bz updateMbr_neg
+b updateMbr_pos_eq
+l41_LF_makeTxn_False_False_False_True:
+itxn_begin
+b l58_LF_makeTxnK_False_True
+l1_LF_mbrAdd:
+load 6 // GV_mbrAdd :: UInt
++
+store 6 // GV_mbrAdd :: UInt
+retsub
+l56_LF_makeTxn_False_True_False_True:
+itxn_begin
+itxn_field CloseRemainderTo
+b l58_LF_makeTxnK_False_True
